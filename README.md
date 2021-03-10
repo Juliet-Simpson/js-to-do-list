@@ -1,45 +1,48 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# JavaScript To Do List
 
-Welcome USER_NAME,
+A web-based To-Do-List app for Code-Institute's Fullstack Developer Diploma Milestone Two project.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+## User Stories
 
-## Gitpod Reminders
+* A user who struggles with keeping manually written to-do lists is looking for an automated alternative on their devices.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+* A user who is struggling with organisation wants to keep a record of tasks they need to do that can be easily updated with new items and finished ones deleted.
 
-`python3 -m http.server`
+* A user who is struggling with motivation wants an attractive interface and other fun features to encourage them to engage with the tasks they must perform.
 
-A blue button should appear to click: *Make Public*,
+* A user wants to be able to return to the app after closing it and review lists that they have written at an earlier date.
 
-Another blue button should appear to click: *Open Browser*.
+* Two users wish to use the app from the same device and would like to each be able to access their own list.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* A user would like to be able to keep multiple lists within the app.
 
-A blue button should appear to click: *Make Public*,
+* A user would like to obtain information about the weather in their location at the same time as reviewing their things-to-do.
 
-Another blue button should appear to click: *Open Browser*.
+* A user would like to see the deadline for things to be done on a calendar.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## UX
 
-## Updates Since The Instructional Video
+### **1. Strategy**
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+To create a to do list app that meets the needs of the user stories.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### **2. Scope**
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+Potential features to include:
+* Text box to add items to the list.
+* Option to order list items using a drag and drop API.
+* Option to strike-through completed items.
+* Option to delete items.
+* To-do lists locally saved so that they can be retrieved after a users first visit.
+* Option to change overall colour scheme.
+* 'Done!' GIF and sound when a task is complete.
+* Option to highlight urgent items in red.
+* Connect to a calendar API to log deadlines.
+* Connect to a weather API to give current weather information.
+* Option to log in using Facebook.
+* Option to name lists and create multiple lists symaltaniosly.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
