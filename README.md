@@ -40,7 +40,9 @@ Potential features to include:
 * Connect to a calendar API to log deadlines.
 * Connect to a weather API to give current weather information.
 * Option to log in using Facebook.
-* Option to name lists and create multiple lists symaltaniosly.
+* Option to name lists and create multiple lists symaltaneously.
+* Option to edit list items.
+* Option to add deadline and or extra info (phone numbers etc) to a list item.
 
 
 
