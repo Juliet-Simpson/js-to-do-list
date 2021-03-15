@@ -10,10 +10,8 @@ function addToDo(toDo){
 let input = document.getElementById('item');
 
 document.addEventListener("keyup", function(event){
-     console.log(event);
     if (event.keyCode == 13){
         let toDo = input.value;
-        console.log(toDo)
             if(toDo){
                 addToDo(toDo);
             }
