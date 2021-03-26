@@ -65,6 +65,10 @@ POSSIBLE
 
 The wireframes can be viewed here:
 
+- [New list wireframes](https://github.com/Juliet-Simpson/js-to-do-list/blob/master/assets/wireframes/new-list-wireframes.pdf)
+
+- [List wireframes](https://github.com/Juliet-Simpson/js-to-do-list/blob/master/assets/wireframes/list-wireframes.pdf)
+
 
 
 
