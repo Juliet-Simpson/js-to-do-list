@@ -2,3 +2,24 @@
 .main-heading{
     text-align: center;
 }
+
+.new-list-wrapper{
+    text-align: center;
+}
+
+.lists-list-title{
+    text-align: center;
+}
+
+.list-name{
+    list-style-type: none;
+    text-align: center;
+}
+
+.the-weather{
+    border-left: 2px solid;
+}
+
+.weather-title{
+    text-align: center;
+}

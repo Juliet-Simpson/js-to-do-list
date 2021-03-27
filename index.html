@@ -19,15 +19,22 @@
 <p>date and time</p><hr>
     </header>
     <section>
+        <div class="new-list-wrapper">
+        <input id="name-new-list" type="text" placeholder="New List Name">
+        </div>
+        <hr>
         <div class="container-fluid">
         <div class="row">
-        <div class="content">
-            <ul id="list">
-            </ul>
-        </div>
-        <div class="add-item">
-            <input type="text" id="item" placeholder="Add something">
-        </div>
+            <div class="col-md-8 lists-list-container">
+                <h3 class="lists-list-title">Current Lists</h3>
+                <ul id="lists-list">
+                    <li class="list-name">List 1</li>
+                    <li class="list-name">List 2</li>
+                </ul>
+            </div>
+            <div class="col-md-4 the-weather">
+                <h3 class="weather-title">The Weather</h3>
+            </div>
         </div>
         </div>
     </section>
