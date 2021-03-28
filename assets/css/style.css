@@ -1,10 +1,22 @@
-
+*{
+    padding:0;
+    margin:0;
+}
 .main-heading{
     text-align: center;
 }
 
+.hr-no-mgn{
+    margin-bottom:0;
+}
+
 .new-list-wrapper{
     text-align: center;
+}
+
+.lists-list-container{
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .lists-list-title{
@@ -22,4 +34,37 @@
 
 .weather-title{
     text-align: center;
+}
+
+@media only screen and (min-width: 768px){
+.line-md{
+    display: none;
+}
+}
+
+/* List Page */
+
+.list-container{
+    text-align: center;
+}
+
+.btn-wrapper{
+    text-align: center;
+}
+
+.lists-list-container-sm{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media only screen and (min-width: 768px){
+.lists-list-container-sm{
+    display: none;
+}
+}
+
+@media only screen and (max-width: 768px){
+.lists-list-container-big{
+    display: none;
+}
 }
