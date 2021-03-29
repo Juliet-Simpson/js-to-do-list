@@ -1,10 +1,12 @@
 let list = document.getElementById('list');
 
+
 function addToDo(toDo){
     let li = document.createElement('li');
         li.textContent = toDo;
         list.appendChild(li);
 }
+
 
 
 let input = document.getElementById('item');
