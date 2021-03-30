@@ -20,45 +20,31 @@
 <p>date and time</p><hr>
     </header>
     <section>
-        <h2 class="list-name-title">List Name</h2>
+        <div class="new-list-wrapper">
+        <input id="name-new-list" type="text" placeholder="New List Name">
+        </div>
         <hr class="hr-no-mgn">
         <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4 lists-list-container-big">
-                <h3 class="lists-list-title">Current Lists</h3>
-                <ul class="lists-list">
-                    <li class="list-name">List 1<i class="far fa-trash-alt"></i></li>
-                    <li class="list-name">List 2<i class="far fa-trash-alt"></i></li>
-                </ul>
-                <div class="btn-wrapper">
-                <a type="button" href="index.html" class="btn btn-primary new-list-button">New List</a>
-                </div>
+            <div class="col-md-4">
             </div>
-            <div class="col-md-4 list-container">The actual list
-                <ul id="list">
+            <div class="col-md-4 list-container">
+            <ul id="list">
             </ul>
         <div class="add-item">
             <input type="text" id="item" placeholder="Add something">
-            </div>
+            </div><br>
             <button role="button" class="btn btn-secondary delete-list-btn">Delete List</button>
-            </div>
-            <div class="col lists-list-container-sm">
-                <hr>
-                <h3 class="lists-list-title">Current Lists</h3>
-                <ul class="lists-list">
-                    <li class="list-name">List 1<i class="far fa-trash-alt"></i></li>
-                    <li class="list-name">List 2<i class="far fa-trash-alt"></i></li>
-                </ul>
-                <div class="btn-wrapper">
-                <a type="button" href="index.html" class="btn btn-primary new-list-button">New List</a>
-                </div>
-                <hr>
+            <a type="button" href="list.html" class="btn btn-primary new-list-button">New List</a><br>
+            <a href="index.html">Back to Current Lists</a>
+            <hr class="line-md">
             </div>
             <div class="col-md-4 the-weather">
+                
                 <h3 class="weather-title">The Weather</h3>
             </div>
         </div>
-        </div>
+    </div>
     </section>
    <script src="assets/javascript/list-item.js"></script> 
 </body>

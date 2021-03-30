@@ -27,8 +27,14 @@
     text-align: center;
 }
 
-i{
-    display: inline;
+.list-container{
+    padding-left: 0;
+    padding-right: 0;
+}
+.thing{
+    list-style-type: none;
+    text-align: left;
+    margin-left: 30%;
 }
 
 .the-weather{
