@@ -6,17 +6,15 @@
 
 // Date and Time.. using location
 
-// New list name text box: On enter keyup append text to h2 "listname" title in list.html Also to local storage as one of the list of lists that can take the content of list.  Please enter a list title alert if entered empty box.
+// New list name text box: On enter keyup append text to h2 "listname" title in list.html Also to local storage as one of the list of lists that can take the content of list.  Please enter a list title alert if entered empty box.  Also appending to the list of current lists in index html.
 
-// List of current lists containing ALL current lists in index.html and all except the open list in list.html.  Each list title is a link to open that as the current list in list.html
-
-// Bin button next to each list name to delete that list.
+// List of current lists containing ALL current lists in index.html 
 
 // Add list item textbox which appends a toDo to the current to do list and locally stores it.
 
-// New list button in list.html that will locally store the current list and return to index.html
+// New list button in list.html that will locally store the current list and reload page with empty textbox.
 
-// Delete list button which returns to index.html without storing the current list.html
+// Delete list button which clears list page without storing the current list.html
 
 // Weather API using current location.
 
