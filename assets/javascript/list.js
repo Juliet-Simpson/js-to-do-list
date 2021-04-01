@@ -1,6 +1,6 @@
 //Append list name to list of current lists
 
-let lists = document.getElementById('lists-list');
+let lists = document.getElementsByClassName('lists-list');
 
 function addName(name){
 

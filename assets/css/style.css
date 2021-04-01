@@ -22,10 +22,6 @@
     text-align: center;
 }
 
-.list-name{
-    list-style-type: none;
-    text-align: center;
-}
 
 .list-container{
     padding-left: 0;
@@ -64,6 +60,10 @@
 .lists-list-container-sm{
     padding-left: 0;
     padding-right: 0;
+}
+
+.lists-list-container-big{
+    border-right: 2px solid;
 }
 
 @media only screen and (min-width: 768px){
