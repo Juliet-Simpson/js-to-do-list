@@ -1,14 +1,20 @@
 //Append list name to list of current lists
 
+
 let lists = document.getElementsByClassName('lists-list');
+console.log(lists);
 
 function addName(name){
 
-    let listName = `<li class="list-name"><a class="list-link" href="list.html">${name}</a></li>`;
+    const newListElement = document.createElement('li');
+    newListElement.classList.add('list-name');
+    newListElement.innerHTML = `<a class="list-link" href="list.html">${name}</a>`;
+    console.log(newListElement);
 
-    let positioning = "beforeend";
-
-lists.insertAdjacentElement(positioning, listName);
+    for (let i=0; i < lists.length; i++) {
+        lists[i].appendChild(newListElement);
+    }
+console.log("Adding name: ", name);
 
 }
 
@@ -55,7 +61,7 @@ document.addEventListener("keyup", function(event){
                 addToDo(toDo);
             }
         input.value ="";
-            
+           
     }
 });
 
