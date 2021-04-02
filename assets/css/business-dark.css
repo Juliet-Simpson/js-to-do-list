@@ -1,3 +1,21 @@
+/*All themes styling*/
+
+/*Themes Buttons*/
+
+#business-light{
+    background-color: lightgrey;
+}
+
+#fun-light{
+    background-color: rgba(255, 193, 23, 0.726);
+}
+
+#fun-dark{
+    background-color:darkorchid;
+}
+
+/*Heading*/
+
 .main-heading{
     text-align: center;
 }
@@ -47,7 +65,6 @@
 }
 }
 
-/* List Page */
 
 .list-container{
     text-align: center;
@@ -76,4 +93,10 @@
 .lists-list-container-big{
     display: none;
 }
+}
+
+/*business-dark styling*/
+
+#business-dark{
+    text-transform: uppercase;
 }

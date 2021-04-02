@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link id="page-theme" type="text/css" rel="stylesheet"  href="assets/css/business-light.css">
     <title>To Do List</title>
 </head>
 <body>
     <header>
         <div class="btn-group theme-selector" role="group" aria-label="Theme selector">
-  <button type="button" class="btn btn-secondary theme-selector-btn">Business Light</button>
-  <button type="button" class="btn btn-secondary theme-selector-btn">Business Dark</button>
-  <button type="button" class="btn btn-secondary theme-selector-btn">Fun Light</button>
-  <button type="button" class="btn btn-secondary theme-selector-btn">Fun Dark</button>
+  <button type="button" id="business-light" onclick="swapStyleSheet('assets/css/business-light.css')" class="btn btn-secondary theme-selector-btn">Business Light</button>
+  <button type="button" id="business-dark" onclick="swapStyleSheet('assets/css/business-dark.css')" class="btn btn-secondary theme-selector-btn">Business Dark</button>
+  <button type="button" id="fun-light" onclick="swapStyleSheet('assets/css/fun-light.css')" class="btn btn-secondary theme-selector-btn">Fun Light</button>
+  <button type="button" id="fun-dark" onclick="swapStyleSheet('assets/css/fun-dark.css')" class="btn btn-secondary theme-selector-btn">Fun Dark</button>
 </div>
 <h1 class="main-heading">Things To Do</h1>
 <p>date and time</p><hr>

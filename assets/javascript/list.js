@@ -1,3 +1,11 @@
+// Change Style theme
+
+function swapStyleSheet(sheet){
+    document.getElementById('page-theme').setAttribute('href',sheet);
+
+}
+console.log(swapStyleSheet);
+
 //Append list name to list of current lists
 
 
