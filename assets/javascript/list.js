@@ -1,4 +1,4 @@
-// Change Style theme
+// Change style theme
 
 function swapStyleSheet(sheet){
     document.getElementById('page-theme').setAttribute('href',sheet);
@@ -20,7 +20,7 @@ function addName(name){
     console.log(newListElement);
 
     for (let i=0; i < lists.length; i++) {
-        lists[i].appendChild(newListElement);
+        lists[i].appendChild(newListElement.cloneNode(true));
     }
 console.log("Adding name: ", name);
 
