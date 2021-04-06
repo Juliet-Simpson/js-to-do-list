@@ -79,18 +79,18 @@
     padding-right: 0;
 }
 
-.lists-list-container-big{
+.weather-container-big{
     border-right: 2px solid;
 }
 
 @media only screen and (min-width: 768px){
-.lists-list-container-sm{
+.weather-container-sm{
     display: none;
 }
 }
 
 @media only screen and (max-width: 768px){
-.lists-list-container-big{
+.weather-container-big{
     display: none;
 }
 }
