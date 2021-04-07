@@ -43,10 +43,10 @@ let list = document.getElementById('list');
 
 function addToDo(toDo){
       
-    let text = `<li class='thing'>
-               <p class='text'> ${toDo} 
-			<i class="far fa-trash-alt"></i></p>
-           </li>`;
+    let text = `<li class="thing"><p class="text"><i class="far fa-circle" job="complete" id="0"></i> ${toDo} 
+			<i class="fas fa-exclamation" job="urgent" id="0"><i class="far fa-trash-alt" job="delete" id="0"></i></p></li>`;
+
+console.log(text)
 
 let position = "beforeend";
 
