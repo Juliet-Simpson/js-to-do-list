@@ -18,7 +18,7 @@ function dateAndTime(){
     let day = todaysDate.getDay();
     let month = todaysDate.getMonth();
     let monthDay = todaysDate.getDate();
-    let dayArray = new Array("Sun.","Mon.","Tues.","Weds.","Thurs.","Fri.","Sat.");
+    let dayArray = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
     let monthArray = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
 
     // Time
@@ -33,6 +33,10 @@ function dateAndTime(){
             h = h-0;
         }
 
+        if(h<10){
+            h = "0" + h;
+        }
+
         if(m<10){
             m = "0" + m;
         }
@@ -43,14 +47,11 @@ function dateAndTime(){
 
     let clockDisplay = document.getElementById("date-and-time");
 
-    clockDisplay.textContent = "" +dayArray[day] + " " +monthDay+ " " +monthArray[month]+ " " +year+ " | " +h+ ":" +m+ ":" +s;
-
-    clockDisplay.innerText = "" +dayArray[day] + " " +monthDay+ " " +monthArray[month]+ " " +year+ " | " +h+ ":" +m+ ":" +s;
+    clockDisplay.innerHTML = "" +dayArray[day] + " " +monthDay+ " " +monthArray[month]+ " " +year+ " | " +h+ ":" +m+ ":" +s;
 
     setTimeout("dateAndTime()",1000);
 }
 dateAndTime();
-console.log(dateAndTime);
 
 //Append list name to list of current lists
 
@@ -87,12 +88,26 @@ if (event.keyCode == 13){
 
 let list = document.getElementById('list');
 
-function addToDo(toDo){
-      
-    let text = `<li class="thing"><p class="text"><i class="far fa-circle" job="complete" id="0"></i> ${toDo} 
-			<i class="fas fa-exclamation" job="urgent" id="0"><i class="far fa-trash-alt" job="delete" id="0"></i></p></li>`;
+let CHECK = "far fa-circle"
+let UNCHECK = "fas fa-check"
+let PRIORITY = "red-text"
+let STRIKETHROUGH = "strike-through"
 
-console.log(text)
+function addToDo(toDo,id,done,urgent,trash){
+
+    if(trash){return;}
+
+    const DONE = done ? UNCHECK : CHECK;
+    const LINE = done ?  STRIKETHROUGH : "" ;
+    const RED = urgent ? PRIORITY : "";
+
+      
+    let text = `<li class="thing">
+                    <p ><i class=" ${DONE}" job="complete" id="${id}"></i> 
+                    <span class="text ${LINE} ${RED}">${toDo} <i class="fas fa-exclamation" job="redColor" id="${id}"></i></span>
+			        <i class="far fa-trash-alt" job="delete" id="${id} "></i></p></li>`;
+
+console.log(LINE);
 
 let position = "beforeend";
 
@@ -112,4 +127,6 @@ document.addEventListener("keyup", function(event){
     }
 });
 
+addToDo("My project", 1, true, true, false);
 
+console.log(addToDo);
