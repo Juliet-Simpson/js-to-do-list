@@ -1,22 +1,92 @@
-// Done button next to each list item which can display a green tick and strikethrough the text after click.  A 'well done' gif with a sound loads on click.
 
-// Urgent button which will display the list item in Red
+// LOCAL STORAGE
 
-// Bin button next to each todo to delete it. 
+// saving theme
 
-// Date and Time.. using location
+// function swapStyleSheet(sheet){
+//     document.getElementById('page-theme').setAttribute('href',sheet);
 
-// New list name text box: On enter keyup append text to h2 "listname" title in list.html Also to local storage as one of the list of lists that can take the content of list.  Please enter a list title alert if entered empty box.  Also appending to the list of current lists in index html.
+// }
 
-// List of current lists containing ALL current lists in index.html 
+function populateStorage() {
+  localStorage.setItem('page-theme', document.getElementById('page-theme').value);
+ 
+}
 
-// Add list item textbox which appends a toDo to the current to do list and locally stores it.
+// OR
 
-// New list button in list.html that will locally store the current list and reload page with empty textbox.
+localStorage.setItem('colorSetting', '#a4509b');
 
-// Delete list button which clears list page without storing the current list.html
+{"page-theme": "business-light",}
+
+// saving lists
+
+let LISTS = []
+let id = 0
+
+localStorage.setItem("TODO", JSON.stringify(LIST));
+// paste this wherever LIST array is updated... need something similar for LISTS ??
+
+{"LISTS": [
+    {"name": "list1",
+     "items": ["item1.1":{
+                        name:toDo;
+                        id: id;
+                        done: false;
+                        urgent: false;
+                        trash: false;}, "item1.2":{},]
+   }, {"name": "list2"
+        "items" : ["item2.1":{}]}
+  ]
+ }
+
+
+// Retrieving lists
+let data = localStorage.getItem("TODO");
+
+if(data){
+    LIST = JSON.parse(data);
+    id = LIST.length;
+    loadlist(LIST);
+}else{
+    LIST = [];
+    id = 0;
+}
+
+function loadList(array){
+    array.forEach(function(item){
+        addToDo(item.name, item.id, item.done, item.urgent, item.trash);
+    })
+}
+
+//  trash button ???
+
+Storage.removeItem()
+
+// delete list button
+
+// DO THIS WEEKEND
+
+// make icons toggling work, sort out urgent one
+
+// save list name
+// retrieve list name from current lists put back in h2
+
+// store theme
+
+// work on css
+
+// MONDAY TUTOR SESSION
+// try and sort out linking list to lists in storage
+// deleting a list
+// retieving a list
+
+// THEN
+ 
+// How to use description replaced with add a to do textbox once a title is in place 
+
+//   A 'well done' gif with a sound loads on click.
 
 // Weather API using current location.
 
-// Choice of 4 colour schemes/styles which will apply to both pages when selcted.  Bar of buttons to select at top of page.
 

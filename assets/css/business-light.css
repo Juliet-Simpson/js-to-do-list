@@ -24,6 +24,8 @@
     margin-bottom:0;
 }
 
+/* List title */
+
 .new-list-wrapper{
     text-align: center;
 }
@@ -31,6 +33,9 @@
 .list-name-title{
     text-align: center;
 }
+
+/* Current lists */
+
 .lists-list-container{
     padding-left: 0;
     padding-right: 0;
@@ -40,6 +45,7 @@
     text-align: center;
 }
 
+/* to-do section */
 .list-container{
     padding-left: 0;
     padding-right: 0;
@@ -47,7 +53,11 @@
 .thing{
     list-style-type: none;
     text-align: left;
-    margin-left: 30%;
+    margin-left: 0;
+}
+
+.thing i{
+    padding:0 10px 0;
 }
 
 .strike-through{
@@ -57,6 +67,8 @@
 .red-text{
     color:red;
 }
+
+/* The Weather */
 
 .the-weather{
     border-left: 2px solid;

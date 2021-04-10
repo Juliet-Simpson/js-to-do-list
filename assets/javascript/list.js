@@ -54,7 +54,7 @@ function dateAndTime(){
 dateAndTime();
 
 //Append list name to list of current lists
-
+let LISTS;
 
 let lists = document.getElementById('lists-list');
 
@@ -88,9 +88,13 @@ if (event.keyCode == 13){
 
 let list = document.getElementById('list');
 
-let CHECK = "far fa-circle"
-let UNCHECK = "fas fa-check"
+let LIST;
+let id;
+
+let CHECK = "fa-circle"
+let UNCHECK = "fa-check-circle"
 let PRIORITY = "red-text"
+let EXCLAMATION = "fa-exclamation"
 let STRIKETHROUGH = "strike-through"
 
 function addToDo(toDo,id,done,urgent,trash){
@@ -103,7 +107,7 @@ function addToDo(toDo,id,done,urgent,trash){
 
       
     let text = `<li class="thing">
-                    <p ><i class=" ${DONE}" job="complete" id="${id}"></i> 
+                    <p ><i class="far ${DONE} fa-lg" job="complete" id="${id}"></i> 
                     <span class="text ${LINE} ${RED}">${toDo} <i class="fas fa-exclamation" job="redColor" id="${id}"></i></span>
 			        <i class="far fa-trash-alt" job="delete" id="${id} "></i></p></li>`;
 
@@ -121,12 +125,86 @@ document.addEventListener("keyup", function(event){
         let toDo = input.value;
             if(toDo){
                 addToDo(toDo);
+                // addToDo(toDo, id, false, false, false);
+
+                // LIST.push({
+                //     name :toDo,
+                //     id : id,
+                //     done : false,
+                //     urgent : false,
+                //     trash : false,
+                // });
+
+        localStorage.setItem("TODO", JSON.stringify(LIST));
+
+                id ++;
             }
-        input.value ="";
+        input.value = "";
            
     }
 });
 
 addToDo("My project", 1, true, true, false);
 
-console.log(addToDo);
+// toggle icons
+// check/uncheck
+
+let element = document.getElementsByClassName("thing");
+function completeToDo(element){
+    element.classList.toggle(CHECK);
+    // element.classList.toggle("far fa-circle");
+    // element.classList.toggle("fa-circle");
+    element.classList.toggle(UNCHECK);
+    // element.classList.toggle("fas fa-check");
+    // element.classList.toggle("fa-check");
+    element.parentNode.querySelector(".text").classList.toggle(STRIKETHROUGH);
+
+    LIST[element.id].done = LIST[element.id].done ? false : true;
+    console.log (LIST[element.id])
+}
+
+console.log(element);
+
+// Urgent
+function toDoAlert(element){
+    // element.classList.toggle(EXCLAMATION);
+    element.parentNode.classList.toggle(PRIORITY);
+
+    // LIST[element.id].urgent = LIST[element.id].urgent ? false : true;
+    item.property = !item.property
+    console.log(toDoAlert);
+}
+
+// trash
+function removeToDo(element){
+    element.parentNode.parentNode.removeChild(element.parentNode);
+
+    LIST[element.id].trash = true;
+}
+
+// target the icons
+
+//   Array.from(document.getElementById("thing")).forEach(function(element) {
+//      element.addEventListener("click", function(){
+     
+list.addEventListener("click",function(event){
+
+    const element = event.target;
+    console.log(element.classList);
+    const elementJob = element.attributes.job.value;
+
+    if(elementJob == "complete"){
+        completeToDo(element);
+    }else if(elementJob == "redColor"){
+        toDoAlert(element);
+    }else if(elementJob == "delete"){
+        removeToDo(element);
+    }
+     
+    localStorage.setItem("TODO", JSON.stringify(LIST));
+
+    });
+
+// })});
+
+    
