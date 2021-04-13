@@ -1,9 +1,16 @@
 // Change style theme
+let activeSheet = document.getElementById('page-theme');
 
-function swapStyleSheet(sheet){
-    document.getElementById('page-theme').setAttribute('href',sheet);
-
+if (localStorage.getItem("lastActiveSheet")) {
+     activeSheet.setAttribute('href',localStorage.getItem("lastActiveSheet"));
 }
+
+function swapStyleSheet(sheet){ 
+    activeSheet.setAttribute('href', sheet);
+    localStorage.setItem("lastActiveSheet", sheet);
+}
+
+
 console.log(swapStyleSheet);
 
 // Date and time
