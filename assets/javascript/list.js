@@ -65,7 +65,6 @@ function addName(name){
     lists.insertAdjacentHTML(positioning, listName);
 }
 
-
 //Create and name a new list
 
 let title = document.getElementById('list-title')
@@ -88,8 +87,7 @@ if (event.keyCode == 13){
 
 let list = document.getElementById('list');
 
-let LIST;
-let id;
+let LIST, id;
 
 let CHECK = "fa-circle"
 let UNCHECK = "fa-check-circle"
@@ -101,17 +99,35 @@ function addToDo(toDo,id,done,urgent,trash){
 
     if(trash){return;}
 
-    const DONE = done ? UNCHECK : CHECK;
-    const LINE = done ?  STRIKETHROUGH : "" ;
-    const RED = urgent ? PRIORITY : "";
+    // DONE
+    let DONE;
+    if(done === true){
+        DONE = UNCHECK;
+    }else{
+        DONE = CHECK;
+    }
 
+    // STRIKETHROUGH
+    let LINE;
+    if(done === true){
+        LINE = STRIKETHROUGH;
+    }else{
+        LINE = "";
+    }
+    // PRIORITY
+    let RED;
+    if(urgent === true){  
+        RED = PRIORITY;
+    }else{
+        RED = "";
+    }
       
     let text = `<li class="thing">
                     <p ><i class="far ${DONE} fa-lg" job="complete" id="${id}"></i> 
                     <span class="text ${LINE} ${RED}">${toDo} <i class="fas fa-exclamation" job="redColor" id="${id}"></i></span>
 			        <i class="far fa-trash-alt" job="delete" id="${id} "></i></p></li>`;
 
-console.log(LINE);
+console.log(text);
 
 let position = "beforeend";
 
@@ -125,7 +141,6 @@ document.addEventListener("keyup", function(event){
         let toDo = input.value;
             if(toDo){
                 addToDo(toDo);
-                // addToDo(toDo, id, false, false, false);
 
                 // LIST.push({
                 //     name :toDo,
@@ -135,16 +150,15 @@ document.addEventListener("keyup", function(event){
                 //     trash : false,
                 // });
 
-        localStorage.setItem("TODO", JSON.stringify(LIST));
+        // localStorage.setItem("TODO", JSON.stringify(LIST));
 
-                id ++;
+                // id ++;
             }
         input.value = "";
            
     }
 });
 
-addToDo("My project", 1, true, true, false);
 
 // toggle icons
 // check/uncheck
@@ -152,34 +166,26 @@ addToDo("My project", 1, true, true, false);
 let element = document.getElementsByClassName("thing");
 function completeToDo(element){
     element.classList.toggle(CHECK);
-    // element.classList.toggle("far fa-circle");
-    // element.classList.toggle("fa-circle");
     element.classList.toggle(UNCHECK);
-    // element.classList.toggle("fas fa-check");
-    // element.classList.toggle("fa-check");
     element.parentNode.querySelector(".text").classList.toggle(STRIKETHROUGH);
 
-    LIST[element.id].done = LIST[element.id].done ? false : true;
-    console.log (LIST[element.id])
 }
 
 console.log(element);
 
 // Urgent
 function toDoAlert(element){
-    // element.classList.toggle(EXCLAMATION);
+    
     element.parentNode.classList.toggle(PRIORITY);
-
-    // LIST[element.id].urgent = LIST[element.id].urgent ? false : true;
     item.property = !item.property
-    console.log(toDoAlert);
-}
+    }
+
 
 // trash
 function removeToDo(element){
     element.parentNode.parentNode.removeChild(element.parentNode);
 
-    LIST[element.id].trash = true;
+    // LIST[element.id].trash = true;
 }
 
 // target the icons

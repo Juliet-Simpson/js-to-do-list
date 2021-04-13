@@ -62,6 +62,7 @@
 
 .strike-through{
     text-decoration:line-through;
+    color:black !important;
 }
 
 .red-text{
