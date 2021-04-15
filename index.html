@@ -28,12 +28,26 @@
         <div class="container-fluid">
         <div class="row">
             <div class="col-md-4 weather-container-big">
-                <h3 class="weather-title">The Weather</h3>
+                <div class="weather-head"><h3 class="weather-title">The Weather</h3></div>
+                <div class="notification"> </div>
+        <div class="weather-container">
+            <div class="weather-icon">
+                <img src="assets/weather-icons/unknown.png" alt="">
             </div>
+            <div class="temperature-value">
+                <p>- °<span>C</span></p>
+            </div>
+            <div class="temperature-description">
+                <p> - </p>
+            </div>
+            <div class="location">
+                <p>-</p>
+            </div>
+        </div>
+    </div>
             <div class="col-md-4 list-container">
             <ul id="list">
-                <!-- <li class="thing"><p class="text"><i class="far fa-circle"></i><i class="fas fa-check"></i> ${toDo} 
-			<i class="fas fa-exclamation"><i class="far fa-trash-alt"></i></p></li> -->
+                
             </ul>
         <div class="add-item">
             <input type="text" id="item" placeholder="Add something">
@@ -44,7 +58,7 @@
             <hr class="line-md">
             </div>
             
-            <div class="col-md-4 the-weather">
+            <div class="col-md-4 current-lists">
                 <h3 class="lists-list-title">Current Lists</h3>
                 <ul id="lists-list">
                 </ul>
@@ -56,6 +70,7 @@
             </div>
         </div>
     </section>
+    <script src="assets/javascript/weather.js"></script> 
    <script src="assets/javascript/list.js"></script> 
 </body>
 </html>
