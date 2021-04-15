@@ -61,7 +61,7 @@ function dateAndTime(){
 dateAndTime();
 
 //Append list name to list of current lists
-let LISTS;
+let LISTS = [];
 
 let lists = document.getElementById('lists-list');
 
@@ -85,16 +85,36 @@ if (event.keyCode == 13){
             change.style.display = 'none';
             addName(name);
         }
+        if(title.style.display == 'none'){
+            title.style.display = 'block'
+        }
+        if(change == ""){
+            title.style.display = 'none';
+        }
         change.value="";
 }
 })
 
+console.log(title);
+
+// function to add list name to local storage
 
 //Add a to-do item to list
 
+// get the whole object, 
+// tell it which list, 
+
 let list = document.getElementById('list');
 
-let LIST, id;
+let LIST,
+id;
+
+const TODO = {
+    toDo: "",
+    id: 0, 
+    urgent: false,
+    done: false
+}
 
 let CHECK = "fa-circle"
 let UNCHECK = "fa-check-circle"
@@ -102,7 +122,7 @@ let PRIORITY = "red-text"
 let EXCLAMATION = "fa-exclamation"
 let STRIKETHROUGH = "strike-through"
 
-function addToDo(toDo,id,done,urgent,trash){
+function addToDo(toDo, id, done, urgent, trash){
 
     if(trash){return;}
 
@@ -134,7 +154,6 @@ function addToDo(toDo,id,done,urgent,trash){
                     <span class="text ${LINE} ${RED}">${toDo} <i class="fas fa-exclamation" job="redColor" id="${id}"></i></span>
 			        <i class="far fa-trash-alt" job="delete" id="${id} "></i></p></li>`;
 
-console.log(text);
 
 let position = "beforeend";
 
@@ -148,14 +167,6 @@ document.addEventListener("keyup", function(event){
         let toDo = input.value;
             if(toDo){
                 addToDo(toDo);
-
-                // LIST.push({
-                //     name :toDo,
-                //     id : id,
-                //     done : false,
-                //     urgent : false,
-                //     trash : false,
-                // });
 
         // localStorage.setItem("TODO", JSON.stringify(LIST));
 
@@ -178,32 +189,28 @@ function completeToDo(element){
 
 }
 
-console.log(element);
 
 // Urgent
+
 function toDoAlert(element){
     
     element.parentNode.classList.toggle(PRIORITY);
     item.property = !item.property
     }
 
-
 // trash
+
 function removeToDo(element){
     element.parentNode.parentNode.removeChild(element.parentNode);
-
-    // LIST[element.id].trash = true;
 }
 
 // target the icons
 
-//   Array.from(document.getElementById("thing")).forEach(function(element) {
-//      element.addEventListener("click", function(){
-     
+
 list.addEventListener("click",function(event){
 
     const element = event.target;
-    console.log(element.classList);
+
     const elementJob = element.attributes.job.value;
 
     if(elementJob == "complete"){
@@ -214,10 +221,15 @@ list.addEventListener("click",function(event){
         removeToDo(element);
     }
      
-    localStorage.setItem("TODO", JSON.stringify(LIST));
+    // localStorage.setItem("TODO", JSON.stringify(LIST));
 
     });
 
-// })});
+// put back in storage like this
 
-    
+// New list button
+
+function newListButton(){
+    title.style.display = 'none';
+    change.style.display = 'block';
+}

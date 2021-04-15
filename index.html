@@ -11,10 +11,10 @@
 <body>
     <header>
         <div class="btn-group theme-selector" role="group" aria-label="Theme selector">
-  <button type="button" id="business-light" onclick="swapStyleSheet('assets/css/business-light.css')" class="btn btn-secondary theme-selector-btn">Business Light</button>
-  <button type="button" id="business-dark" onclick="swapStyleSheet('assets/css/business-dark.css')" class="btn btn-secondary theme-selector-btn">Business Dark</button>
-  <button type="button" id="fun-light" onclick="swapStyleSheet('assets/css/fun-light.css')" class="btn btn-secondary theme-selector-btn">Fun Light</button>
-  <button type="button" id="fun-dark" onclick="swapStyleSheet('assets/css/fun-dark.css')" class="btn btn-secondary theme-selector-btn">Fun Dark</button>
+  <button type="button" id="business-light" onclick="swapStyleSheet('assets/css/business-light.css')" class="btn btn-secondary theme-selector-btn" data-stylesheet="assets/css/business-light.css">Business Light</button>
+  <button type="button" id="business-dark" onclick="swapStyleSheet('assets/css/business-dark.css')" class="btn btn-secondary theme-selector-btn" data-stylesheet="assets/css/business-dark.css">Business Dark</button>
+  <button type="button" id="fun-light" onclick="swapStyleSheet('assets/css/fun-light.css')" class="btn btn-secondary theme-selector-btn" data-stylesheet="assets/css/fun-light.css">Fun Light</button>
+  <button type="button" id="fun-dark" onclick="swapStyleSheet('assets/css/fun-dark.css')" class="btn btn-secondary theme-selector-btn" data-stylesheet="assets/css/fun-dark.css">Fun Dark</button>
 </div>
 <h1 class="main-heading">Things To Do</h1>
 <div id="date-and-time"></div><hr>
@@ -39,7 +39,8 @@
             <input type="text" id="item" placeholder="Add something">
             </div><br>
             <button role="button" class="btn btn-secondary delete-list-btn">Delete List</button>
-            <a type="button" href="index.html" class="btn btn-primary new-list-button">New List</a><br>
+            <button role="button" class="btn btn-primary" id="new-list-button" onclick="newListButton()">New List</button>
+            <br>
             <hr class="line-md">
             </div>
             

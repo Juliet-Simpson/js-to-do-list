@@ -29,12 +29,11 @@ localStorage.setItem("TODO", JSON.stringify(LIST));
 
 {"LISTS": [
     {"name": "list1",
-     "items": ["item1.1":{
-                        name:toDo;
-                        id: id;
-                        done: false;
-                        urgent: false;
-                        trash: false;}, "item1.2":{},]
+     "items": [{name:toDo;
+                id: id;
+                done: false;
+                urgent: false;
+                trash: false;}, {},]
    }, {"name": "list2"
         "items" : ["item2.1":{}]}
   ]
