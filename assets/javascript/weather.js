@@ -63,8 +63,6 @@ console.log(api);
     });
 }
 
-
-
 // Display Weather to UI
 function displayWeather(){
     iconElement.innerHTML = `<img src = "assets/weather-icons/${weather.iconId}.png">`;
