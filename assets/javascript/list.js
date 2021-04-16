@@ -1,97 +1,39 @@
-// Change style theme
-let activeSheet = document.getElementById('page-theme');
-
-if (localStorage.getItem("lastActiveSheet")) {
-     activeSheet.setAttribute('href',localStorage.getItem("lastActiveSheet"));
-}
-
-function swapStyleSheet(sheet){ 
-    activeSheet.setAttribute('href', sheet);
-    localStorage.setItem("lastActiveSheet", sheet);
-}
-
-
-console.log(swapStyleSheet);
-
-// Date and time
-
-function dateAndTime(){
-    // Date
-    let todaysDate = new Date;
-    let year = todaysDate.getYear();
-            if(year<1000){
-                year += 1900;
-            }
-    let day = todaysDate.getDay();
-    let month = todaysDate.getMonth();
-    let monthDay = todaysDate.getDate();
-    let dayArray = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
-    let monthArray = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
-
-    // Time
-    let timeNow = new Date();
-    let h = timeNow.getHours();
-    let m = timeNow.getMinutes();
-    let s = timeNow.getSeconds();
-
-        if(h ==24){
-            h=0;
-        }else if (h>12){
-            h = h-0;
-        }
-
-        if(h<10){
-            h = "0" + h;
-        }
-
-        if(m<10){
-            m = "0" + m;
-        }
-
-        if(s<10){
-            s = "0" + s;
-        }
-
-    let clockDisplay = document.getElementById("date-and-time");
-
-    clockDisplay.innerHTML = "" +dayArray[day] + " " +monthDay+ " " +monthArray[month]+ " " +year+ " | " +h+ ":" +m+ ":" +s;
-
-    setTimeout("dateAndTime()",1000);
-}
-dateAndTime();
-
-//Append list name to list of current lists
+// Declare Global Variables
 let LISTS = [];
 
-let lists = document.getElementById('lists-list');
+// Select elements
 
-function addName(name){
+let listsElement = document.getElementById('lists-list');
+let title = document.getElementById('list-title');
+let listOfToDosElement = document.getElementById('list');
+let newListInput = document.getElementById('name-new-list');
+let newToDoInput = document.getElementById('item');
+let thingElement = document.getElementsByClassName("thing");
+
+// Append list name to list of current lists
+
+function renderList(name){
     let listName = `<li><a class="list-link" href="">${name}</a></li>`;
     let positioning = "beforeend";
 
-    lists.insertAdjacentHTML(positioning, listName);
+    listsElement.insertAdjacentHTML(positioning, listName);
 }
 
 //Create and name a new list
 
-let title = document.getElementById('list-title')
-
-let change = document.getElementById('name-new-list');
-    change.addEventListener('keyup', function(event) {
+    newListInput.addEventListener('keyup', function(event) {
 if (event.keyCode == 13){
-    let name = change.value;
+    let name = newListInput.value;
         if(name){
             title.textContent = name;
-            change.style.display = 'none';
-            addName(name);
+            newListInput.style.display = 'none';
+            renderList(name);
         }
         if(title.style.display == 'none'){
             title.style.display = 'block'
         }
-        if(change == ""){
-            title.style.display = 'none';
-        }
-        change.value="";
+        
+        newListInput.value="";
 }
 })
 
@@ -104,7 +46,7 @@ console.log(title);
 // get the whole object, 
 // tell it which list, 
 
-let list = document.getElementById('list');
+
 
 let LIST,
 id;
@@ -157,14 +99,14 @@ function addToDo(toDo, id, done, urgent, trash){
 
 let position = "beforeend";
 
-list.insertAdjacentHTML(position, text);
+listOfToDosElement.insertAdjacentHTML(position, text);
 }
 
-let input = document.getElementById('item');
+
 
 document.addEventListener("keyup", function(event){
     if (event.keyCode == 13){
-        let toDo = input.value;
+        let toDo = newToDoInput.value;
             if(toDo){
                 addToDo(toDo);
 
@@ -172,7 +114,7 @@ document.addEventListener("keyup", function(event){
 
                 // id ++;
             }
-        input.value = "";
+        newToDoInput.value = "";
            
     }
 });
@@ -181,11 +123,11 @@ document.addEventListener("keyup", function(event){
 // toggle icons
 // check/uncheck
 
-let element = document.getElementsByClassName("thing");
+
 function completeToDo(element){
-    element.classList.toggle(CHECK);
-    element.classList.toggle(UNCHECK);
-    element.parentNode.querySelector(".text").classList.toggle(STRIKETHROUGH);
+    thingElement.classList.toggle(CHECK);
+    thingElement.classList.toggle(UNCHECK);
+    thingElement.parentNode.querySelector(".text").classList.toggle(STRIKETHROUGH);
 
 }
 
@@ -231,6 +173,7 @@ list.addEventListener("click",function(event){
 
 function newListButton(){
     title.style.display = 'none';
-    change.style.display = 'block';
+    newListInput.style.display = 'block';
+    title.textContent = "";
 }
 

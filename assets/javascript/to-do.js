@@ -39,6 +39,7 @@ localStorage.setItem("TODO", JSON.stringify(LIST));
   ]
  }
 
+ const TODO_TO_ADD = {...LIST};
 
 // Retrieving lists
 let data = localStorage.getItem("TODO");

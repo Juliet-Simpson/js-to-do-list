@@ -1,0 +1,119 @@
+/*All themes styling*/
+
+/*Themes Buttons*/
+
+#business-light{
+    background-color: lightgrey;
+}
+
+#fun-light{
+    background-color: rgba(255, 193, 23, 0.726);
+}
+
+#fun-dark{
+    background-color:darkorchid;
+}
+
+/*Heading*/
+
+.main-heading{
+    text-align: center;
+}
+
+.hr-no-mgn{
+    margin-bottom:0;
+}
+
+/* List title */
+
+.new-list-wrapper{
+    display:flex;
+    justify-content: center;
+}
+
+.list-name-title{
+    text-align: center;
+}
+
+/* Current lists */
+
+.current-lists{
+    border-left: 2px solid;
+}
+
+
+.lists-list-title{
+    text-align: center;
+}
+
+/* to-do section */
+
+
+.list-container{
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+.thing{
+    list-style-type: none;
+    text-align: left;
+    margin-left: 0;
+}
+
+.thing i{
+    padding:0 10px 0;
+}
+
+.strike-through{
+    text-decoration:line-through;
+    color:black !important;
+}
+
+.red-text{
+    color:red;
+}
+
+
+
+@media only screen and (min-width: 768px){
+.line-md{
+    display: none;
+}
+}
+
+
+.btn-wrapper{
+    text-align: center;
+}
+
+.lists-list-container-sm{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.weather-container-big{
+    border-right: 2px solid;
+}
+
+@media only screen and (min-width: 768px){
+.weather-container-sm{
+    display: none;
+}
+}
+
+@media only screen and (max-width: 768px){
+.weather-container-big{
+    display: none;
+}
+}
+
+/* The Weather */
+
+
+.weather-title{
+    text-align: center;
+}
+
+.notification{
+    display:none;
+}
