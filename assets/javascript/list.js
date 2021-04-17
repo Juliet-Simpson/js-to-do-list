@@ -1,5 +1,40 @@
 // Declare Global Variables
-let LISTS = [];
+let LISTS = [
+    {
+        name : 'Juliet',
+        items : [
+            {
+                toDo : 'Do something 1',
+                urgent : false,
+                done : false,
+                id : 0
+            },
+            {
+                toDo : 'Do something 2',
+                urgent : false,
+                done : false,
+                id : 1
+            }
+        ]
+    },
+    {
+        name : 'list 2',
+        items : [
+            {
+                toDo : 'Do something 3',
+                urgent : false,
+                done : false,
+                id : 0
+            },
+            {
+                toDo : 'Do something 4',
+                urgent : false,
+                done : false,
+                id : 1
+            }
+        ]
+    }
+];
 
 // Select elements
 
@@ -9,6 +44,16 @@ let listOfToDosElement = document.getElementById('list');
 let newListInput = document.getElementById('name-new-list');
 let newToDoInput = document.getElementById('item');
 let thingElement = document.getElementsByClassName("thing");
+
+// Render lists to user interface
+
+function renderLists(LISTS){
+    LISTS.forEach(function(list){
+        renderList(list.name)
+    })
+}
+renderLists(LISTS);
+
 
 // Append list name to list of current lists
 
