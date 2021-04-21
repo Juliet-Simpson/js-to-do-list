@@ -151,19 +151,20 @@ let position = "beforeend";
 listOfToDosElement.insertAdjacentHTML(position, text);
 }
 
-
-document.addEventListener("keyup", function(event){
+newToDoInput.addEventListener("keyup", function(event){
     if (event.keyCode == 13){
-        let toDo = newToDoInput.value;
-            if(toDo){
+            // Add a todo item but only when input is not empty and a list is selected
+            if(newToDoInput.value && selectedList){
+                const toDo = {
+                                text : newToDoInput.value,
+                                urgent : false,
+                                done : false
+                }
                 addToDo(toDo);
 
-        // localStorage.setItem("TODO", JSON.stringify(LIST));
-
-                // id ++;
-            }
-        newToDoInput.value = "";
-           
+                // Clear input
+                newToDoInput.value = "";
+            }        
     }
 });
 
@@ -220,3 +221,4 @@ function newListButton(){
     newListInput.style.display = 'block';
     title.textContent = "";
 }
+
