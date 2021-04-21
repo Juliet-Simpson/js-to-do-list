@@ -8,7 +8,7 @@ A web-based To-Do-List app for Code-Institute's Fullstack Developer Diploma Mile
 
 * A user who is struggling with organisation wants to keep a record of tasks they need to do that can be easily updated with new items and finished ones deleted.
 
-* A user who is struggling with motivation wants an attractive interface and other fun features to encourage them to engage with the tasks they must perform.
+* A user who is struggling with motivation wants an attractive interface to encourage them to engage with the tasks they must perform.
 
 * A user wants to be able to return to the app after closing it and review lists that they have written at an earlier date.
 

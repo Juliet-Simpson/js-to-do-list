@@ -64,6 +64,7 @@ function saveList (name){
     // Re-render LISTS
     renderLists(LISTS);
 }
+
 // Select List function
 function selectList(name){
     // Save the list name to the global variable selectedList
@@ -77,6 +78,24 @@ function selectList(name){
         newListInput.style.display = "block";
         title.style.display = "none";
     }
+}
+
+// Delete list function
+function deleteList(){
+    // Removes the selected list from the LISTS array
+    LISTS.forEach(function(list,index){
+        if(selectedList == list.name){
+            LISTS.splice(index, 1);
+        }
+    })
+    // Save LISTS to local storage
+    localStorage.setItem("LISTS", JSON.stringify(LISTS));
+
+    // Re-render LISTS
+    renderLists(LISTS);
+
+    // There is now no selected list
+    selectList("")
 }
 
 let LIST,
