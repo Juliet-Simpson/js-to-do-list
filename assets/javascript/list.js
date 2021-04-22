@@ -160,13 +160,28 @@ newToDoInput.addEventListener("keyup", function(event){
                                 urgent : false,
                                 done : false
                 }
+                // Save todo to LISTS array and update local storage
+                saveToDo(toDo);
+                
+                // Render a todo to UI
                 addToDo(toDo);
 
                 // Clear input
                 newToDoInput.value = "";
             }        
-    }
+        }
 });
+
+function saveToDo(toDo){
+    LISTS.forEach(function(list){
+        if(list.name === selectedList){
+            list.todos.push(toDo)
+        }
+    })
+
+    // Save LISTS to local storage
+    localStorage.setItem("LISTS", JSON.stringify(LISTS));  
+}
 
 // toggle icons
 // check/uncheck
@@ -221,4 +236,3 @@ function newListButton(){
     newListInput.style.display = 'block';
     title.textContent = "";
 }
-
