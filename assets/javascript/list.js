@@ -78,6 +78,7 @@ function selectList(name){
         newListInput.style.display = "block";
         title.style.display = "none";
     }
+    renderListOfToDos(selectedList);
 }
 
 // Delete list function
@@ -141,6 +142,21 @@ function addToDo(toDo, listName){
     let position = "beforeend";
 
     listOfToDosElement.insertAdjacentHTML(position, text);
+}
+
+// Render list of todos
+function renderListOfToDos(listName){
+    // Clear existing list of todos
+    listOfToDosElement.innerHTML = "";
+
+    // Render new list of to dos
+    LISTS.forEach(function(list){
+        if(list.name === listName){
+            list.todos.forEach(function(toDo){
+                addToDo(toDo, listName);
+            })
+        }
+    })
 }
 
 newToDoInput.addEventListener("keyup", function(event){
@@ -213,13 +229,8 @@ list.addEventListener("click",function(event){
         toDoAlert(element);
     }else if(elementJob == "delete"){
         removeToDo(element);
-    }
-     
-    // localStorage.setItem("TODO", JSON.stringify(LIST));
-
-    });
-
-// put back in storage like this
+    }    
+});
 
 // New list button
 
