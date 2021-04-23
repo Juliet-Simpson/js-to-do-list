@@ -41,13 +41,11 @@
     border-left: 2px solid;
 }
 
-
 .lists-list-title{
     text-align: center;
 }
 
 /* to-do section */
-
 
 .list-container{
     padding-left: 0;
@@ -74,13 +72,11 @@
 }
 
 
-
 @media only screen and (min-width: 768px){
 .line-md{
     display: none;
 }
 }
-
 
 .btn-wrapper{
     text-align: center;
@@ -108,7 +104,6 @@
 }
 
 /* The Weather */
-
 
 .weather-title{
     text-align: center;

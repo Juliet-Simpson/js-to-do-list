@@ -97,30 +97,19 @@ function deleteList(){
     // There is now no selected list
     selectList("")
 }
-
-let LIST,
-id;
-
-const TODO = {
-    toDo: "",
-    id: 0, 
-    urgent: false,
-    done: false
-}
-
+// Just some class names for css
 let CHECK = "fa-circle"
 let UNCHECK = "fa-check-circle"
 let PRIORITY = "red-text"
 let EXCLAMATION = "fa-exclamation"
 let STRIKETHROUGH = "strike-through"
 
-function addToDo(toDo, id, done, urgent, trash){
-
-    if(trash){return;}
+// Render a single todo
+function addToDo(toDo, listName){
 
     // DONE
     let DONE;
-    if(done === true){
+    if(toDo.done === true){
         DONE = UNCHECK;
     }else{
         DONE = CHECK;
@@ -128,27 +117,30 @@ function addToDo(toDo, id, done, urgent, trash){
 
     // STRIKETHROUGH
     let LINE;
-    if(done === true){
+    if(toDo.done === true){
         LINE = STRIKETHROUGH;
     }else{
         LINE = "";
     }
     // PRIORITY
     let RED;
-    if(urgent === true){  
+    if(toDo.urgent === true){  
         RED = PRIORITY;
     }else{
         RED = "";
     }
       
     let text = `<li class="thing">
-                    <p ><i class="far ${DONE} fa-lg" job="complete" id="${id}"></i> 
-                    <span class="text ${LINE} ${RED}">${toDo} <i class="fas fa-exclamation" job="redColor" id="${id}"></i></span>
-                    <i class="far fa-trash-alt" job="delete" id="${id} "></i></p></li>`;
+                    <i class="far ${DONE} fa-lg" job="complete" listName="${listName}" toDoText=”${toDo.text}” ></i> 
+                    <span class="text ${LINE} ${RED}">
+                        ${toDo.text} 
+                        <i class="fas fa-exclamation" job="redColor" listName="${listName}" toDoText=”${toDo.text}”></i>
+                    </span>
+                    <i class="far fa-trash-alt" job="delete" listName="${listName}" toDoText=”${toDo.text}”></i></li>`;
 
-let position = "beforeend";
+    let position = "beforeend";
 
-listOfToDosElement.insertAdjacentHTML(position, text);
+    listOfToDosElement.insertAdjacentHTML(position, text);
 }
 
 newToDoInput.addEventListener("keyup", function(event){
