@@ -15,7 +15,6 @@ let title = document.getElementById('list-title');
 let listOfToDosElement = document.getElementById('list');
 let newListInput = document.getElementById('name-new-list');
 let newToDoInput = document.getElementById('item');
-let thingElement = document.getElementsByClassName("thing");
 
 // Render lists to user interface
 
@@ -132,12 +131,12 @@ function addToDo(toDo, listName){
     }
       
     let text = `<li class="thing">
-                    <i class="far ${DONE} fa-lg" job="complete" listName="${listName}" toDoText=”${toDo.text}” ></i> 
-                    <span class="text ${LINE} ${RED}">
-                        ${toDo.text} 
-                        <i class="fas fa-exclamation" job="redColor" listName="${listName}" toDoText=”${toDo.text}”></i>
-                    </span>
-                    <i class="far fa-trash-alt" job="delete" listName="${listName}" toDoText=”${toDo.text}”></i></li>`;
+        <i class="far ${DONE} fa-lg" job="complete" listName='${listName}' toDoText='${toDo.text}' ></i> 
+        <span class="text ${LINE} ${RED}">
+            ${toDo.text} 
+            <i class="fas fa-exclamation" job="redColor" listName="${listName}" toDoText='${toDo.text}'></i>
+        </span>
+        <i class="far fa-trash-alt" job="delete" listName="${listName}" toDoText='${toDo.text}'></i></li>`;
 
     let position = "beforeend";
 
@@ -172,7 +171,7 @@ newToDoInput.addEventListener("keyup", function(event){
                 saveToDo(toDo);
                 
                 // Render a todo to UI
-                addToDo(toDo);
+                addToDo(toDo, selectedList);
 
                 // Clear input
                 newToDoInput.value = "";
@@ -191,49 +190,49 @@ function saveToDo(toDo){
     localStorage.setItem("LISTS", JSON.stringify(LISTS));  
 }
 
-// toggle icons
-// check/uncheck
-
-function completeToDo(element){
-    thingElement.classList.toggle(CHECK);
-    thingElement.classList.toggle(UNCHECK);
-    thingElement.parentNode.querySelector(".text").classList.toggle(STRIKETHROUGH);
-
-}
-
-// Urgent
-
-function toDoAlert(element){
+// target the icons
+listOfToDosElement.addEventListener("click",function(event){
     
-    element.parentNode.classList.toggle(PRIORITY);
-    item.property = !item.property
+    // Target the clicked icon
+    const element = event.target;
+    
+    // Exit function when text is clicked
+    if(element.tagName === "SPAN"){
+        return;
     }
 
-// trash
-
-function removeToDo(element){
-    element.parentNode.parentNode.removeChild(element.parentNode);
-}
-
-// target the icons
-
-list.addEventListener("click",function(event){
-
-    const element = event.target;
-
+    // Get values of custom attributes
     const elementJob = element.attributes.job.value;
+    const elementListName = element.attributes.listName.value;
+    const elementToDoText = element.attributes.toDoText.value;
 
-    if(elementJob == "complete"){
-        completeToDo(element);
-    }else if(elementJob == "redColor"){
-        toDoAlert(element);
-    }else if(elementJob == "delete"){
-        removeToDo(element);
-    }    
+    // Search for the correct list and the correct todo and then make the clicked change 
+    LISTS.forEach(function(list){
+        if(list.name === elementListName){
+            list.todos.forEach(function(toDo, index){
+                if(toDo.text === elementToDoText){
+                    if(elementJob == "complete"){
+                        // Done toDo
+                        toDo.done = !toDo.done
+                    }else if(elementJob == "redColor"){
+                        // Urgent toDo
+                        toDo.urgent = !toDo.urgent
+                    }else if(elementJob == "delete"){
+                        // Delete toDo from todos array
+                        list.todos.splice(index, 1)
+                    }
+                }               
+            })
+        }
+    })
+    // Save LISTS to local storage
+    localStorage.setItem("LISTS", JSON.stringify(LISTS));
+
+    // Re render todos
+    renderListOfToDos(selectedList);
 });
 
 // New list button
-
 function newListButton(){
     title.style.display = 'none';
     newListInput.style.display = 'block';
