@@ -234,7 +234,5 @@ listOfToDosElement.addEventListener("click",function(event){
 
 // New list button
 function newListButton(){
-    title.style.display = 'none';
-    newListInput.style.display = 'block';
-    title.textContent = "";
+    selectList("");
 }
