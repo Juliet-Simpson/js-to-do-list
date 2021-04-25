@@ -42,7 +42,7 @@ function renderList(name){
 newListInput.addEventListener('keyup', function(event) {
     if (event.keyCode == 13){
         let name = newListInput.value;
-            if(name){
+            if(name){   
                 saveList(name)
                 selectList(name)
                 // Clear input
@@ -53,15 +53,34 @@ newListInput.addEventListener('keyup', function(event) {
 
 // Save list function
 function saveList (name){
-    LISTS.push({
-        name: name,
-        todos:[]
-    })
-    // Save LISTS to local storage
-    localStorage.setItem("LISTS", JSON.stringify(LISTS));
+    let listExists = checkForExistingList(name)
+    if(listExists){
+        alert("List name already exists")
+    }else{
+        LISTS.push({
+            name: name,
+            todos:[]
+        })
+        // Save LISTS to local storage
+        localStorage.setItem("LISTS", JSON.stringify(LISTS));
 
-    // Re-render LISTS
-    renderLists(LISTS);
+        // Re-render LISTS
+        renderLists(LISTS);
+    }
+}
+
+// Prevent duplication of list names
+// Check to see if list name exists
+function checkForExistingList(listName){
+
+    let listExists = false;
+
+    LISTS.forEach(function(list){
+        if(list.name === listName){
+            listExists = true
+        }
+    })
+    return listExists;
 }
 
 // Select List function
@@ -241,4 +260,3 @@ listOfToDosElement.addEventListener("click",function(event){
 function newListButton(){
     selectList("");
 }
-
