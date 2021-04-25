@@ -161,20 +161,25 @@ function renderListOfToDos(listName){
 newToDoInput.addEventListener("keyup", function(event){
     if (event.keyCode == 13){
             // Add a todo item but only when input is not empty and a list is selected
-            if(newToDoInput.value && selectedList){
-                const toDo = {
+            if(newToDoInput.value){
+                // Check if the user has selected a list
+                if(selectedList){
+                    const toDo = {
                                 text : newToDoInput.value,
                                 urgent : false,
                                 done : false
-                }
-                // Save todo to LISTS array and update local storage
-                saveToDo(toDo);
-                
-                // Render a todo to UI
-                addToDo(toDo, selectedList);
+                    }
+                    // Save todo to LISTS array and update local storage
+                    saveToDo(toDo);
+                    
+                    // Render a todo to UI
+                    addToDo(toDo, selectedList);
 
-                // Clear input
-                newToDoInput.value = "";
+                    // Clear input
+                    newToDoInput.value = "";  
+                }else{
+                    alert("Please select a list first")
+                } 
             }        
         }
 });
@@ -236,3 +241,4 @@ listOfToDosElement.addEventListener("click",function(event){
 function newListButton(){
     selectList("");
 }
+
