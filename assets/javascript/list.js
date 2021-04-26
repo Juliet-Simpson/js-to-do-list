@@ -188,12 +188,18 @@ newToDoInput.addEventListener("keyup", function(event){
                                 urgent : false,
                                 done : false
                     }
-                    // Save todo to LISTS array and update local storage
-                    saveToDo(toDo);
+                    // Check if todo already exists
+                    let toDoExists = checkForExistingToDo(toDo.text, selectedList)
+                    if(toDoExists){
+                        alert("To do already exists")
+                    }else{
+                        // Save todo to LISTS array and update local storage
+                        saveToDo(toDo);
+                        
+                        // Render a todo to UI
+                        addToDo(toDo, selectedList);
+                    }  
                     
-                    // Render a todo to UI
-                    addToDo(toDo, selectedList);
-
                     // Clear input
                     newToDoInput.value = "";  
                 }else{
@@ -212,6 +218,23 @@ function saveToDo(toDo){
 
     // Save LISTS to local storage
     localStorage.setItem("LISTS", JSON.stringify(LISTS));  
+}
+
+// Check for existing todo
+function checkForExistingToDo(toDoText, listName){
+    let toDoExists = false
+
+    LISTS.forEach(function(list){
+        if(list.name === listName){
+            list.todos.forEach(function(toDo){
+                if(toDo.text === toDoText){
+                    toDoExists = true;
+                }
+            })
+        }
+    })
+
+    return toDoExists;
 }
 
 // target the icons
