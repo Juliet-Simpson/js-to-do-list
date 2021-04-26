@@ -6,7 +6,19 @@ if(localStorage.getItem("LISTS")){
     LISTS =[]
 }
 
-let selectedList = "";
+let selectedList;
+if(localStorage.getItem("SELECTEDLIST")){
+    selectedList = localStorage.getItem("SELECTEDLIST");
+}else{
+    selectedList = "";
+}
+
+// Variables for CSS class names
+let CHECK = "fa-circle"
+let UNCHECK = "fa-check-circle"
+let PRIORITY = "red-text"
+let EXCLAMATION = "fa-exclamation"
+let STRIKETHROUGH = "strike-through"
 
 // Select elements
 
@@ -26,6 +38,11 @@ function renderLists(LISTS){
         renderList(list.name)
     })
 }
+
+//Open the app with last used list and its to dos.
+selectList(selectedList);
+
+// Open the app with saved lists listed under Current Lists.
 renderLists(LISTS);
 
 // Append list name to list of current lists
@@ -87,6 +104,10 @@ function checkForExistingList(listName){
 function selectList(name){
     // Save the list name to the global variable selectedList
     selectedList = name;
+
+    // Save selected list to local storage
+    localStorage.setItem("SELECTEDLIST", selectedList);
+
     // Title
     title.innerHTML = selectedList
     if(selectedList){
@@ -116,12 +137,6 @@ function deleteList(){
     // There is now no selected list
     selectList("")
 }
-// Just some class names for css
-let CHECK = "fa-circle"
-let UNCHECK = "fa-check-circle"
-let PRIORITY = "red-text"
-let EXCLAMATION = "fa-exclamation"
-let STRIKETHROUGH = "strike-through"
 
 // Render a single todo
 function addToDo(toDo, listName){
