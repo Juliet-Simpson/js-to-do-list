@@ -39,7 +39,7 @@ function dateAndTime(){
 
     let clockDisplay = document.getElementById("date-and-time");
 
-    clockDisplay.innerHTML = "" +dayArray[day] + " " +monthDay+ " " +monthArray[month]+ " " +year+ " | " +h+ ":" +m+ ":" +s;
+    clockDisplay.innerHTML = "<i class='far fa-calendar-alt'></i> " + dayArray[day] + " " +monthDay+ " " +monthArray[month]+ " " +year+ " <i class='far fa-clock'></i> " +h+ ":" +m+ ":" +s;
 
     setTimeout("dateAndTime()",1000);
 }
