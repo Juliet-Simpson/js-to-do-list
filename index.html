@@ -28,10 +28,39 @@
                 class="btn btn-secondary theme-selector-btn" data-stylesheet="assets/css/fun-dark.css">Fun Dark</button>
         </div>
         <h1 class="main-heading">Things To Do</h1>
+        <div class="date-howto-container">
         <div id="date-and-time"></div>
-        <hr>
+        <div class="modal-container">
+                   <img data-toggle="modal" data-target="#exampleModalCenter" src="assets/images/how-to-use.png" alt="How To Use" style="width:120px; cursor:pointer;">
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-box" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle"><strong>How To Use</strong></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                        <p>This app enables you to keep everything you must remember to do organised. You can create separate named lists of 'Things To Do' (or anything you like!) and open each list individually to review and edit it.<br>Before adding anything to do, a list title must be showing.  This can be created in the New List input box or selected from previously named lists under the Current Lists heading.  All the to do items that were already on that list will then also show in the main part of the page.</p>
+                        <p><i class="fas fa-exclamation fa-lg modal-urgent"
+                        aria-hidden="true"></i><span class="sr-only">Urgent</span><strong>Urgent</strong> items to do can be highlighted in red by clicking the exclamation icon to the right of the item and deselected as non-urgent by clicking the icon a second time.</p>
+                        <p><strong><i class="far fa-circle"
+                        aria-hidden="true"></i><span class="sr-only">Unchecked</span></strong>/<strong><i class="far fa-check-circle"
+                        aria-hidden="true"></i><span class="sr-only">Checked</span> 'Done'</strong> items can be checked by clicking the circle to its left. The text of a checked item will also show a line through.  A second click on the circle will uncheck the item. </p>
+                        <p><i class="far fa-trash-alt fa-lg"
+                        aria-hidden="true"></i><span class="sr-only">Trash</span>  <strong>Delete</strong> a to do item by clicking on this icon.</p>
+                        <p><img src="assets/images/new-btn.png" alt="New List Button" style="width: 90px;"><strong>  Start a new list</strong> using this  button, your previous list will be saved.</p><p><strong><img src="assets/images/del-btn.png" alt="Delete List Button" style="width: 90px;">  Delete a list</strong> by first selecting its name under Current Lists and then hitting this button.</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        </div>
+        </div>
     </header>
     <section>
+        <hr>
         <div class="new-list-wrapper">
             <h2 id="list-title"></h2>
             <input id="name-new-list" type="text" placeholder="New List Name">
@@ -46,7 +75,7 @@
                     <div class="notification"> </div>
                     <div class="weather-container">
                         <div class="weather-icon">
-                            <img src="assets/weather-icons/unknown.png" alt="">
+                            <img src="assets/images/weather-icons/unknown.png" alt="">
                         </div>
                         <div class="temperature-value">
                             <p>- °<span>C</span></p>
@@ -85,6 +114,10 @@
     <script src="assets/javascript/clock.js"></script>
     <script src="assets/javascript/weather.js"></script>
     <script src="assets/javascript/list.js"></script>
+     <!-- bootstrap js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>
