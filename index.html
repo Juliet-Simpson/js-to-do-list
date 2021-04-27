@@ -1,79 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link type="text/css" rel="stylesheet"  href="assets/css/style.css">
-    <link id="page-theme" type="text/css" rel="stylesheet"  href="assets/css/business-light.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+    <link id="page-theme" type="text/css" rel="stylesheet" href="assets/css/business-light.css">
     <title>To Do List</title>
 </head>
+
 <body>
     <header>
         <div class="btn-group theme-selector" role="group" aria-label="Theme selector">
-  <button type="button" id="business-light" onclick="swapStyleSheet('assets/css/business-light.css')" class="btn btn-secondary theme-selector-btn" data-stylesheet="assets/css/business-light.css">Business Light</button>
-  <button type="button" id="business-dark" onclick="swapStyleSheet('assets/css/business-dark.css')" class="btn btn-secondary theme-selector-btn" data-stylesheet="assets/css/business-dark.css">Business Dark</button>
-  <button type="button" id="fun-light" onclick="swapStyleSheet('assets/css/fun-light.css')" class="btn btn-secondary theme-selector-btn" data-stylesheet="assets/css/fun-light.css">Fun Light</button>
-  <button type="button" id="fun-dark" onclick="swapStyleSheet('assets/css/fun-dark.css')" class="btn btn-secondary theme-selector-btn" data-stylesheet="assets/css/fun-dark.css">Fun Dark</button>
-</div>
-<h1 class="main-heading">Things To Do</h1>
-<div id="date-and-time"></div><hr>
+            <button type="button" id="business-light" onclick="swapStyleSheet('assets/css/business-light.css')"
+                class="btn btn-secondary theme-selector-btn" data-stylesheet="assets/css/business-light.css">Business
+                Light</button>
+            <button type="button" id="business-dark" onclick="swapStyleSheet('assets/css/business-dark.css')"
+                class="btn btn-secondary theme-selector-btn" data-stylesheet="assets/css/business-dark.css">Business
+                Dark</button>
+            <button type="button" id="fun-light" onclick="swapStyleSheet('assets/css/fun-light.css')"
+                class="btn btn-secondary theme-selector-btn" data-stylesheet="assets/css/fun-light.css">Fun
+                Light</button>
+            <button type="button" id="fun-dark" onclick="swapStyleSheet('assets/css/fun-dark.css')"
+                class="btn btn-secondary theme-selector-btn" data-stylesheet="assets/css/fun-dark.css">Fun Dark</button>
+        </div>
+        <h1 class="main-heading">Things To Do</h1>
+        <div id="date-and-time"></div>
+        <hr>
     </header>
     <section>
         <div class="new-list-wrapper">
-        <h2 id="list-title"></h2>
-        <input id="name-new-list" type="text" placeholder="New List Name">
+            <h2 id="list-title"></h2>
+            <input id="name-new-list" type="text" placeholder="New List Name">
         </div>
         <hr class="hr-no-mgn">
         <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-4 weather-container-big">
-                <div class="weather-head"><h3 class="weather-title">The Weather</h3></div>
-                <div class="notification"> </div>
-        <div class="weather-container">
-            <div class="weather-icon">
-                <img src="assets/weather-icons/unknown.png" alt="">
-            </div>
-            <div class="temperature-value">
-                <p>- °<span>C</span></p>
-            </div>
-            <div class="temperature-description">
-                <p> - </p>
-            </div>
-            <div class="location">
-                <p>-</p>
-            </div>
-        </div>
-    </div>
-            <div class="col-md-4 list-container">
-            <ul id="list">
-                
-            </ul>
-        <div class="add-item">
-            <input type="text" id="item" placeholder="Add something">
-            </div><br>
-            <button role="button" class="btn btn-secondary delete-list-btn" onclick = "deleteList()">Delete List</button>
-            <button role="button" class="btn btn-primary" id="new-list-button" onclick="newListButton()">New List</button>
-            <br>
-            <hr class="line-md">
-            </div>
-            
-            <div class="col-md-4 current-lists">
-                <h3 class="lists-list-title">Current Lists</h3>
-                <ul id="lists-list">
-                </ul>
-                
-            </div>
-        </div>
-            <div class="col weather-container-sm">
-                <h3 class="weather-title">The Weather</h3>
+            <div class="row">
+                <div class="col-md-4 weather-container-all">
+                    <div class="weather-head">
+                        <h3 class="weather-title">The Weather</h3>
+                    </div>
+                    <div class="notification"> </div>
+                    <div class="weather-container">
+                        <div class="weather-icon">
+                            <img src="assets/weather-icons/unknown.png" alt="">
+                        </div>
+                        <div class="temperature-value">
+                            <p>- °<span>C</span></p>
+                        </div>
+                        <div class="temperature-description">
+                            <p> - </p>
+                        </div>
+                        <div class="location">
+                            <p>-</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 list-container">
+                    <ul id="list">
+                    </ul>
+                    <div class="add-item">
+                        <input type="text" id="item" placeholder="Add something">
+                    </div><br>
+                    <button role="button" class="btn btn-secondary delete-list-btn" onclick="deleteList()">Delete
+                        List</button>
+                    <button role="button" class="btn btn-primary" id="new-list-button" onclick="newListButton()">New
+                        List</button>
+                    <br>
+                    <hr class="line-md">
+                </div>
+                <div class="col-md-4 current-lists">
+                    <h3 class="lists-list-title">Current Lists</h3>
+                    <ul id="lists-list">
+                    </ul>
+                    <hr class="line-md">
+                </div>
             </div>
         </div>
     </section>
     <script src="assets/javascript/theme.js"></script>
     <script src="assets/javascript/clock.js"></script>
-    <script src="assets/javascript/weather.js"></script> 
-   <script src="assets/javascript/list.js"></script> 
+    <script src="assets/javascript/weather.js"></script>
+    <script src="assets/javascript/list.js"></script>
 </body>
+
 </html>
