@@ -8,7 +8,9 @@
 /*Themes Buttons*/
 .btn-group button {
     border: none;
-    width: 130px;
+    width: 150px;
+    min-height: 40px;
+    font-size: 80% !important;
 }
 
 #business-light{
@@ -34,7 +36,8 @@
 /*Heading*/
 .main-heading{
     text-align: center;
-    margin:14px 0 0;
+    margin:35px 0 0;
+	text-transform: uppercase;
 }
 
 .hr-no-mgn{
@@ -65,7 +68,9 @@
     display:flex;
     justify-content: center;
     padding:20px;
-    max-height: 78px;
+    max-height: 90px;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
 }
 
 input {
@@ -81,52 +86,140 @@ input {
 
 /* Main Section */
 section{
-    height: calc(100vh - 150px);
+    height: calc(100vh - 190px);
     width: 100%;
 }
 
 section .container-main{
-    height: calc(100% - 78px);
+    height: calc(100% - 90px);
 }
 
 section .content{
     height:100%;
 }
 
-/* Current lists */
-
-.current-lists{
-    border-left: 1px solid;
+/* The Weather */
+.weather-container-all{
+    border-right: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
 }
 
-.lists-list-title{
-    text-align: center;
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: larger;
+}
+
+.notification{
+    display:none;
+}
+
+.temperature-value{
+    font-size:xx-large;
+}
+
+.temperature-description{
+    text-transform: capitalize;
+}
+
+.weather-container p{
+    margin-bottom: 10px;
+}
+
+.weather-container img{
+    margin: 10px 0;
+
 }
 
 /* to-do section */
-
-.list-container{
-    padding-left: 0;
-    padding-right: 0;
-    text-align: center;
+.list-container {
+    position: relative;
+    padding-bottom: 110px;
+    border-right: 1px solid;
+}
+#list {
+    padding: 0px 10px;
+    margin: 0;
+    max-height: 100%;
+    overflow-y: auto;
 }
 .thing{
-    list-style-type: none;
-    text-align: left;
-    margin-left: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 15px 0;
+    font-size: 1.1rem;
+}
+.thing span {
+    padding-left: 10px;
+    word-break: keep-all;
+    flex: 1;
+}
+.thing .fa-exclamation {
+    margin-right: 10px;
 }
 
-.thing i{
-    padding:0 10px 0;
+.thing i {
+    cursor: pointer;
 }
 
 .strike-through{
     text-decoration:line-through;
-    color:black !important;
+    color:black;
 }
 
 .red-text{
     color:red;
+}
+/* Input and buttons */
+.input-and-btns {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    text-align: center;
+}
+.input-and-btns input {
+    margin-top: 10px;
+    width:250px
+}
+.input-and-btns button {
+    margin-top: 10px;
+    width: 45%;
+    max-width:160px;
+}
+
+/* Current lists */
+.current-lists{
+    padding: 10px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.current-lists .lists-list-title {
+    text-align: center;
+}
+
+.current-lists ul li {
+    list-style: none;
+    margin: 2px;
+    padding: 5px;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.current-lists ul li:hover {
+    text-decoration: underline;
+    }
+
+.lists-list-title{
+    text-align: center;
 }
 
 @media only screen and (min-width: 768px){
@@ -135,46 +228,59 @@ section .content{
 }
 }
 
-.btn-wrapper{
-    text-align: center;
-}
-
-.weather-container-all{
-    border-right: 1px solid;
-}
-
-/* The Weather */
-
-.weather-title{
-    text-align: center;
-}
-
-.notification{
-    display:none;
-}
-
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 767px){
 .weather-container-all{
     order: 3;
-    border: none;
+    border-right: none;
 }
 .list-container {
     order: 1;
+    padding-bottom: 10px;
+    border-right:none;
 }
 .current-lists {
     order: 2;
     border: none;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0 0 10px;
+    max-height: 250px;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
 }
 .btn-group{
     width:100%;
+}
+.main-heading{
+    margin-top: 20px;
+    margin-bottom: 15px;
 }
 .howto-btn{
     width:120px; 
     margin-right: 0;
 }
 #date-and-time{
-    font-size: smaller;
+    font-size: medium;
+}
+.br-big{
+    display:none;
+    font-size: medium;
+}
+.temperature-value{
+    font-size:larger;
+}
+.weather-container img{
+    margin: 0;
+}
+.thing span {
+    padding-left: 20px;
+}
+#list{
+    min-height: 200px;
+    max-height: 400px;
+}
+.current-lists ul li{
+    text-align: center;
+}
+.current-lists ul li:hover{
+    text-align: center;
 }
 }

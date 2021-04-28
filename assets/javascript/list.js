@@ -158,19 +158,19 @@ function addToDo(toDo, listName){
     }
     // PRIORITY
     let RED;
-    if(toDo.urgent === true){  
+    if(toDo.urgent === true && toDo.done === false){  
         RED = PRIORITY;
     }else{
         RED = "";
     }
       
     let text = `<li class="thing">
-        <i class="far ${DONE} fa-lg" job="complete" listName='${listName}' toDoText='${toDo.text}' ></i> 
+                    <i class="far ${DONE} fa-lg" job="complete" listName='${listName}' toDoText='${toDo.text}' ></i> 
         <span class="text ${LINE} ${RED}">
-            ${toDo.text} 
-            <i class="fas fa-exclamation" job="redColor" listName="${listName}" toDoText='${toDo.text}'></i>
-        </span>
-        <i class="far fa-trash-alt" job="delete" listName="${listName}" toDoText='${toDo.text}'></i></li>`;
+            ${toDo.text}  
+        </span><i class="fas fa-exclamation ${RED}" job="redColor" listName="${listName}" toDoText='${toDo.text}'></i>
+        <i class="far fa-trash-alt" job="delete" listName="${listName}" toDoText='${toDo.text}'></i>
+                </li>`;
 
     let position = "beforeend";
 
@@ -210,6 +210,9 @@ newToDoInput.addEventListener("keyup", function(event){
                     }else{
                         // Save todo to LISTS array and update local storage
                         saveToDo(toDo);
+
+                        // make last entered toDo visible at the bottom of the list
+                        listOfToDosElement.scrollTo(0, listOfToDosElement.scrollHeight);
                         
                         // Render a todo to UI
                         addToDo(toDo, selectedList);
