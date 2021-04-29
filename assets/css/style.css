@@ -226,7 +226,7 @@ section .content{
 }
 .current-lists ul{
     overflow-y: auto;
-    height:90%;
+    height:87%;
 }
 
 .current-lists .lists-list-title {
@@ -271,7 +271,7 @@ body{
     order: 2;
     border: none;
     padding: 0 0 10px;
-    max-height: 250px;
+    max-height: 200px;
 }
 .btn-group{
     width:100%;

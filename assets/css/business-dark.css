@@ -1,7 +1,58 @@
-
-
 /*business-dark styling*/
+
+/* body */
+body {
+  font-family: "Arvo", serif;
+  background-color: #0d1d2e;
+  color: #fff;
+}
 
 #business-dark{
     text-transform: uppercase;
+}
+
+/* Header */
+header {
+    background-image: url("../images/business-dark-bg.png");
+    background-size: cover;
+    -webkit-box-shadow: 0px 7px 33px -10px #000;
+    box-shadow: 0px 7px 33px -10px #000;
+}
+
+/* Inputs */
+input {
+    background-color: #3a3b3c;
+    color: #b0b3a7;
+    border: 1px solid #383838;
+}
+
+/* New List Wrapper */
+.new-list-wrapper {
+    border-bottom: 1px solid #383838;
+}
+
+/* List Container*/
+.list-container {
+    border-right: 1px solid #383838;
+    border-left: 1px solid #383838;
+}
+
+/* How to button*/
+.howto-btn {    
+    background-image: url("../images/how-to-dark.png");
+}
+.howto-btn:hover {
+    background-image: url("../images/how-to-light.png");
+}
+
+/* Modal*/
+.modal-content {
+    background-color: #242526 !important;
+}
+
+/*Weather*/
+/* change color of weather icons to white on dark themes */
+
+.weather-icon img {
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(222deg) brightness(106%) contrast(101%);
 }
