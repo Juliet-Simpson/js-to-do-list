@@ -244,6 +244,8 @@ body{
 .list-container {
     order: 1;
     border-right:none;
+    height:auto;
+    max-height: 100%;
 }
 .current-lists {
     order: 2;
@@ -276,10 +278,6 @@ body{
 }
 .thing span {
     padding-left: 20px;
-}
-.list-container ul{
-    min-height: 200px;
-    max-height: 400px;
 }
 
 .current-lists ul li{
