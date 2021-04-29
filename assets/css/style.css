@@ -317,7 +317,7 @@ section{
     height:30px;
     background-size: 110px 30px;
 }
-.date-and-time{
-    max-width: 180px;
+#date-and-time{
+    max-width: 200px;
 }
 }
