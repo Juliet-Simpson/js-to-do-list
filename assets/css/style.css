@@ -278,7 +278,7 @@ body{
 }
 .main-heading{
     margin-top: 24px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 .howto-btn{
     margin-right: 0;
@@ -318,7 +318,7 @@ section{
     background-size: 110px 30px;
 }
 #date-and-time{
-    max-width: 200px;
+    max-width: 165px;
     font-size: small;
 }
 }
