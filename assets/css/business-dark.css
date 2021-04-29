@@ -49,6 +49,10 @@ input {
 .modal-content {
     background-color: #242526 !important;
 }
+.modal-content .close {
+  color: #fff !important;
+  opacity: 1 !important;
+}
 
 /*Weather*/
 /* change color of weather icons to white on dark themes */

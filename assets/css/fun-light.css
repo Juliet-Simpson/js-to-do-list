@@ -1,11 +1,82 @@
-
-
 /*fun-light styling*/
-
 #fun-light{
     text-transform: uppercase;
 }
 
-.main-heading{
-    color: rgb(255, 0, 0);
+/* Body */
+body {
+  font-family: "Josefin Sans", sans-serif;
+  color: rgb(78, 10, 10);
+  background: linear-gradient(
+    to right,
+    rgb(254, 125, 163) 0%,
+    rgb(216, 145, 253) 10%,
+    rgb(169, 151, 254) 20%,
+    rgb(157, 161, 254) 30%,
+    rgb(113, 181, 255) 40%,
+    rgb(58, 214, 251) 50%,
+    rgb(32, 253, 217) 60%,
+    rgb(40, 253, 70) 70%,
+    rgb(101, 229, 28) 80%,
+    rgb(195, 183, 0) 90%,
+    rgb(254, 147, 41) 100%
+  );
 }
+
+/*Header*/
+#fun-light{
+    text-transform: uppercase;
+}
+header {
+    background-image: url("../images/fun-light-bg.png");
+    background-size: cover;
+    -webkit-box-shadow: 0px 7px 33px -10px #000;
+    box-shadow: 0px 7px 33px -10px #000;
+}
+
+/* Howto-button */
+.howto-btn {
+    background-image: url("../images/how-to-light.png");
+}
+.howto-btn:hover {
+    background-image: url("../images/how-to-dark.png");
+}
+
+/* Inputs */
+input {
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #383838;
+}
+input:focus {
+    border: none;
+    outline: 3px solid rgb(254, 125, 163);
+}
+
+/* New List Wrapper */
+.new-list-wrapper {
+    border-bottom: 1px solid #383838;
+}
+
+/* List Container */
+.list-container {
+    border-right: 1px solid #383838;
+    border-left: 1px solid #383838;
+}
+
+.weather-icon img {
+    -webkit-filter: drop-shadow(5px 5px 5px #fff);
+    filter: drop-shadow(5px 5px 5px #fff);
+}
+
+@media only screen and (max-width: 767px) {
+.weather-container-all,
+.current-lists {
+    border-top: 1px solid #383838;
+  }
+.list-container {
+    border: none;
+}
+}
+
+

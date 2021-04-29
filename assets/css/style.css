@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 
 /*All themes styling*/
 * {
@@ -31,12 +32,12 @@ body{
 }
 
 #fun-light{
-    background-color: yellow;
+    background-color: rgb(32, 253, 217);
     color: #000;
 }
 
 #fun-dark{
-    background-color:darkorchid;
+    background-color:rgb(111, 20, 114);
     color: #fff;
 }
 
