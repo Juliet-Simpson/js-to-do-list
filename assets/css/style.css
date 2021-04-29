@@ -4,12 +4,18 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    width:100vw;
+    height:100vh;
+    overflow: hidden;
+    background-color: antiquewhite;
+}
 
 /*Themes Buttons*/
 .btn-group button {
     border: none;
     width: 150px;
-    min-height: 40px;
+    min-height: 30px;
     font-size: 80% !important;
 }
 
@@ -34,15 +40,15 @@
 }
 
 /*Heading*/
+header{
+    height:190px
+}
 .main-heading{
     text-align: center;
-    margin:35px 0 0;
-	text-transform: uppercase;
+    margin:35px 0 20px;
+    text-transform: uppercase;
 }
 
-.hr-no-mgn{
-    margin:0;
-}
 /* Date and Modal */
 .date-howto-container {
     display: flex;
@@ -68,9 +74,10 @@
     display:flex;
     justify-content: center;
     padding:20px;
-    max-height: 90px;
+    height:90px;
     border-top: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
+    background-color: aqua;
 }
 
 input {
@@ -78,10 +85,6 @@ input {
     font-size: 1.1rem;
     border-radius: 5px;
     border: 1px solid #b9b9b9;
-}
-
-#list-title{
-    margin:0;
 }
 
 /* Main Section */
@@ -113,17 +116,23 @@ section .content{
     align-items: center;
     font-size: larger;
 }
-
 .notification{
+    background-color: #f8d7da;
     display:none;
 }
-
-.temperature-value{
-    font-size:xx-large;
+.notification p{
+  color: #721c24;
+  font-size: 1.2em;
+  margin: 0;
+  text-align: center;
+  padding: 10px 0;
 }
-
+.temperature-value{
+    font-size:2.7rem;
+}
 .temperature-description{
     text-transform: capitalize;
+    font-size: larger;
 }
 
 .weather-container p{
@@ -140,7 +149,9 @@ section .content{
     position: relative;
     padding-bottom: 110px;
     border-right: 1px solid;
+    height:100%;
 }
+
 #list {
     padding: 0px 10px;
     margin: 0;
@@ -162,16 +173,12 @@ section .content{
 .thing .fa-exclamation {
     margin-right: 10px;
 }
-
 .thing i {
     cursor: pointer;
 }
-
 .strike-through{
     text-decoration:line-through;
-    color:black;
 }
-
 .red-text{
     color:red;
 }
@@ -199,7 +206,10 @@ section .content{
 .current-lists{
     padding: 10px;
     height: 100%;
+}
+.current-lists ul{
     overflow-y: auto;
+    height:90%;
 }
 
 .current-lists .lists-list-title {
@@ -222,20 +232,17 @@ section .content{
     text-align: center;
 }
 
-@media only screen and (min-width: 768px){
-.line-md{
-    display: none;
-}
+@media only screen and (max-width: 767px){
+body{
+    overflow-y: auto;
 }
 
-@media only screen and (max-width: 767px){
 .weather-container-all{
     order: 3;
     border-right: none;
 }
 .list-container {
     order: 1;
-    padding-bottom: 10px;
     border-right:none;
 }
 .current-lists {
@@ -250,33 +257,31 @@ section .content{
     width:100%;
 }
 .main-heading{
-    margin-top: 20px;
-    margin-bottom: 15px;
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
 .howto-btn{
     width:120px; 
     margin-right: 0;
 }
 #date-and-time{
-    font-size: medium;
+    font-size: small;
 }
 .br-big{
     display:none;
-    font-size: medium;
 }
-.temperature-value{
-    font-size:larger;
-}
+
 .weather-container img{
     margin: 0;
 }
 .thing span {
     padding-left: 20px;
 }
-#list{
+.list-container ul{
     min-height: 200px;
     max-height: 400px;
 }
+
 .current-lists ul li{
     text-align: center;
 }
@@ -284,3 +289,4 @@ section .content{
     text-align: center;
 }
 }
+

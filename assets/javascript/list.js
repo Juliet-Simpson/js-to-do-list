@@ -66,6 +66,9 @@ newListInput.addEventListener('keyup', function(event) {
                 newListInput.value="";
             }     
     }
+
+    // Scroll to the bottom of the list
+    listsElement.scrollTo(0, listsElement.scrollHeight);
 })
 
 // Save list function
@@ -210,12 +213,12 @@ newToDoInput.addEventListener("keyup", function(event){
                     }else{
                         // Save todo to LISTS array and update local storage
                         saveToDo(toDo);
-
-                        // make last entered toDo visible at the bottom of the list
-                        listOfToDosElement.scrollTo(0, listOfToDosElement.scrollHeight);
                         
                         // Render a todo to UI
                         addToDo(toDo, selectedList);
+
+                        // make last entered toDo visible at the bottom of the list
+                        listOfToDosElement.scrollTo(0, listOfToDosElement.scrollHeight);
                     }  
                     
                     // Clear input
