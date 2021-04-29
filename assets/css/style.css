@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+
 /*All themes styling*/
 * {
     padding: 0;
@@ -8,7 +10,6 @@ body{
     width:100vw;
     height:100vh;
     overflow: hidden;
-    background-color: antiquewhite;
 }
 
 /*Themes Buttons*/
@@ -41,11 +42,11 @@ body{
 
 /*Heading*/
 header{
-    height:190px
+    height:160px
 }
 .main-heading{
     text-align: center;
-    margin:35px 0 20px;
+    margin:30px 0 15px;
     text-transform: uppercase;
 }
 
@@ -62,6 +63,9 @@ header{
     width:150px; 
     cursor:pointer; 
     margin-right: 50px;
+    height:45px;
+    background-size: 150px 45px;
+    background-repeat: no-repeat;
 }
 
 .modal-urgent{
@@ -75,9 +79,6 @@ header{
     justify-content: center;
     padding:20px;
     height:90px;
-    border-top: 1px solid #eeeeee;
-    border-bottom: 1px solid #eeeeee;
-    background-color: aqua;
 }
 
 input {
@@ -89,7 +90,7 @@ input {
 
 /* Main Section */
 section{
-    height: calc(100vh - 190px);
+    height: calc(100vh - 160px);
     width: 100%;
 }
 
@@ -141,14 +142,12 @@ section .content{
 
 .weather-container img{
     margin: 10px 0;
-
 }
 
 /* to-do section */
 .list-container {
     position: relative;
     padding-bottom: 110px;
-    border-right: 1px solid;
     height:100%;
 }
 
@@ -196,11 +195,30 @@ section .content{
     margin-top: 10px;
     width:250px
 }
+
+/*Buttons*/
 .input-and-btns button {
     margin-top: 10px;
     width: 45%;
     max-width:160px;
 }
+.delete-list-btn {
+    background-color: #fa2222;
+    border-color: #fa2222;
+}
+.delete-list-btn:hover {
+    background-color: #d84c58;
+    border-color: #d84c58;
+}
+#new-list-button {
+    background-color: #59abef;
+    border-color: #59abef;
+}
+#new-list-button:hover {
+    background-color: #6bb5f1;
+    border-color: #59abef;
+}
+
 
 /* Current lists */
 .current-lists{
@@ -252,8 +270,6 @@ body{
     border: none;
     padding: 0 0 10px;
     max-height: 250px;
-    border-top: 1px solid #eeeeee;
-    border-bottom: 1px solid #eeeeee;
 }
 .btn-group{
     width:100%;
@@ -263,7 +279,6 @@ body{
     margin-bottom: 24px;
 }
 .howto-btn{
-    width:120px; 
     margin-right: 0;
 }
 #date-and-time{
@@ -272,14 +287,15 @@ body{
 .br-big{
     display:none;
 }
-
 .weather-container img{
     margin: 0;
 }
 .thing span {
     padding-left: 20px;
 }
-
+.input-and-btns button{
+    width:110px;
+}
 .current-lists ul li{
     text-align: center;
 }
@@ -287,4 +303,17 @@ body{
     text-align: center;
 }
 }
-
+@media only screen and (max-width: 576px){
+header{
+    height:190px
+}
+section{
+    height: calc(100vh - 190px);
+}
+.howto-btn{
+    width:110px; 
+    margin-right: 10px;
+    height:30px;
+    background-size: 110px 30px;
+}
+}
