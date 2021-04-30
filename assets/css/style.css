@@ -270,6 +270,7 @@ body{
     order: 3;
     border-right: none;
 }
+
 .list-container {
     order: 1;
     border-right:none;
@@ -338,5 +339,20 @@ section{
 #date-and-time{
     max-width: 150px;
     font-size: small;
+}
+}
+
+@media only screen and (max-width: 300px){
+.howto-btn {
+    margin-right: 10px;
+    width: 90px;
+    height: 30px;
+    background-size: 90px 30px;
+}
+.main-heading {
+    font-size: 2rem;
+}
+.date-howto-container {
+    padding: 0 5px;
 }
 }
