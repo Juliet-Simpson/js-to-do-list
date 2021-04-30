@@ -172,6 +172,9 @@ section .content{
 .thing .fa-exclamation {
     margin-right: 10px;
 }
+.think .fa-trash-alt{
+    margin-right: 10px;
+}
 .thing i {
     cursor: pointer;
 }
@@ -297,6 +300,9 @@ body{
 .thing span {
     padding-left: 20px;
 }
+.thing .fa-exclamation {
+    margin-right: 20px;
+}
 .input-and-btns button{
     width:110px;
 }
@@ -322,7 +328,7 @@ section{
     background-size: 110px 30px;
 }
 #date-and-time{
-    max-width: 160px;
+    max-width: 150px;
     font-size: small;
 }
 }
