@@ -1,9 +1,9 @@
 // Declare Global Variables
 let LISTS;
 if(localStorage.getItem("LISTS")){
-    LISTS = JSON.parse(localStorage.getItem("LISTS"))
+    LISTS = JSON.parse(localStorage.getItem("LISTS"));
 }else{
-    LISTS =[]
+    LISTS =[];
 }
 
 let selectedList;
@@ -14,11 +14,11 @@ if(localStorage.getItem("SELECTEDLIST")){
 }
 
 // Variables for CSS class names
-let CHECK = "fa-circle"
-let UNCHECK = "fa-check-circle"
-let PRIORITY = "red-text"
-let EXCLAMATION = "fa-exclamation"
-let STRIKETHROUGH = "strike-through"
+let CHECK = "fa-circle";
+let UNCHECK = "fa-check-circle";
+let PRIORITY = "red-text";
+let EXCLAMATION = "fa-exclamation";
+let STRIKETHROUGH = "strike-through";
 
 // Select elements
 
@@ -35,8 +35,8 @@ function renderLists(LISTS){
     listsElement.innerHTML = "";
 
     LISTS.forEach(function(list){
-        renderList(list.name)
-    })
+        renderList(list.name);
+    });
 }
 
 //Open the app with last used list and its to dos.
@@ -46,7 +46,6 @@ selectList(selectedList);
 renderLists(LISTS);
 
 // Append list name to list of current lists
-
 function renderList(name){
     let listName = `<li><div class="list-link" onclick = "selectList('${name}')" >${name}</div></li>`;
     let positioning = "beforeend";
@@ -55,13 +54,12 @@ function renderList(name){
 }
 
 //Create and name a new list
-
 newListInput.addEventListener('keyup', function(event) {
     if (event.keyCode == 13){
         let name = newListInput.value;
             if(name){   
-                saveList(name)
-                selectList(name)
+                saveList(name);
+                selectList(name);
                 // Clear input
                 newListInput.value="";
             }     
@@ -69,18 +67,19 @@ newListInput.addEventListener('keyup', function(event) {
 
     // Scroll to the bottom of the list
     listsElement.scrollTo(0, listsElement.scrollHeight);
-})
+});
 
 // Save list function
 function saveList (name){
-    let listExists = checkForExistingList(name)
+    let listExists = checkForExistingList(name);
     if(listExists){
-        alert("List name already exists")
+        alert("There is already a list with this name.  Please enter a different one.");
     }else{
         LISTS.push({
             name: name,
             todos:[]
-        })
+        });
+      
         // Save LISTS to local storage
         localStorage.setItem("LISTS", JSON.stringify(LISTS));
 
@@ -97,9 +96,10 @@ function checkForExistingList(listName){
 
     LISTS.forEach(function(list){
         if(list.name === listName){
-            listExists = true
+            listExists = true;
         }
-    })
+    });
+  
     return listExists;
 }
 
@@ -112,7 +112,7 @@ function selectList(name){
     localStorage.setItem("SELECTEDLIST", selectedList);
 
     // Title
-    title.innerHTML = selectedList
+    title.innerHTML = selectedList;
     if(selectedList){
         newListInput.style.display = "none";
         title.style.display = "block";
@@ -125,12 +125,13 @@ function selectList(name){
 
 // Delete list function
 function deleteList(){
-    // Removes the selected list from the LISTS array
+    // Remove the selected list from the LISTS array
     LISTS.forEach(function(list,index){
         if(selectedList == list.name){
             LISTS.splice(index, 1);
         }
-    })
+    });
+  
     // Save LISTS to local storage
     localStorage.setItem("LISTS", JSON.stringify(LISTS));
 
@@ -190,9 +191,9 @@ function renderListOfToDos(listName){
         if(list.name === listName){
             list.todos.forEach(function(toDo){
                 addToDo(toDo, listName);
-            })
+            });
         }
-    })
+    });
 }
 
 newToDoInput.addEventListener("keyup", function(event){
@@ -205,11 +206,11 @@ newToDoInput.addEventListener("keyup", function(event){
                                 text : newToDoInput.value,
                                 urgent : false,
                                 done : false
-                    }
+                    };
                     // Check if todo already exists
-                    let toDoExists = checkForExistingToDo(toDo.text, selectedList)
+                    let toDoExists = checkForExistingToDo(toDo.text, selectedList);
                     if(toDoExists){
-                        alert("To do already exists")
+                        alert("This thing to do is already listed");
                     }else{
                         // Save todo to LISTS array and update local storage
                         saveToDo(toDo);
@@ -224,7 +225,7 @@ newToDoInput.addEventListener("keyup", function(event){
                     // Clear input
                     newToDoInput.value = "";  
                 }else{
-                    alert("Please select a list first")
+                    alert("Please select or name a list before adding anything to do.");
                 } 
             }        
         }
@@ -233,9 +234,9 @@ newToDoInput.addEventListener("keyup", function(event){
 function saveToDo(toDo){
     LISTS.forEach(function(list){
         if(list.name === selectedList){
-            list.todos.push(toDo)
+            list.todos.push(toDo);
         }
-    })
+    });
 
     // Save LISTS to local storage
     localStorage.setItem("LISTS", JSON.stringify(LISTS));  
@@ -243,7 +244,7 @@ function saveToDo(toDo){
 
 // Check for existing todo
 function checkForExistingToDo(toDoText, listName){
-    let toDoExists = false
+    let toDoExists = false;
 
     LISTS.forEach(function(list){
         if(list.name === listName){
@@ -251,9 +252,9 @@ function checkForExistingToDo(toDoText, listName){
                 if(toDo.text === toDoText){
                     toDoExists = true;
                 }
-            })
+            });
         }
-    })
+    });
 
     return toDoExists;
 }
@@ -281,18 +282,19 @@ listOfToDosElement.addEventListener("click",function(event){
                 if(toDo.text === elementToDoText){
                     if(elementJob == "complete"){
                         // Done toDo
-                        toDo.done = !toDo.done
+                        toDo.done = !toDo.done;
                     }else if(elementJob == "redColor"){
                         // Urgent toDo
-                        toDo.urgent = !toDo.urgent
+                        toDo.urgent = !toDo.urgent;
                     }else if(elementJob == "delete"){
                         // Delete toDo from todos array
-                        list.todos.splice(index, 1)
+                        list.todos.splice(index, 1);
                     }
                 }               
-            })
+            });
         }
-    })
+    });
+  
     // Save LISTS to local storage
     localStorage.setItem("LISTS", JSON.stringify(LISTS));
 

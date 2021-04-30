@@ -60,6 +60,9 @@ header{
 }
 
 /* Modal */
+.modal-title{
+    padding-top: 5px;
+}
 .howto-btn{
     width:150px; 
     cursor:pointer; 
@@ -72,6 +75,9 @@ header{
 .modal-urgent{
     padding-right: 5px;
     color: red;
+}
+.close{
+    font-size: 2.3rem;
 }
 
 /* List title */

@@ -22,7 +22,7 @@ if('geolocation' in navigator){
     navigator.geolocation.getCurrentPosition(setPosition, showError);
 }else{
     notificationElement.style.display = "block";
-    notificationElement.innerHTML = "<p>Browser doesn't Support Geolocation</p>";
+    notificationElement.innerHTML = "<p>Your browser doesn't support geolocation</p>";
 }
 
 // Set position
@@ -37,7 +37,7 @@ function setPosition(position){
 
 function showError(error){
     notificationElement.style.display = "block";
-    notificationElement.innerHTML = `<p> ${error.message} </p>`
+    notificationElement.innerHTML = `<p> ${error.message} </p>`;
 }
 
 // Get weather from API
