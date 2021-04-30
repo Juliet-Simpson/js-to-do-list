@@ -7,11 +7,10 @@ A web-based To-Do-List app for Code-Institute's Fullstack Developer Diploma Mile
 The deployed site on GitHub Pages can be viewed [here.](https://juliet-simpson.github.io/js-to-do-list/)
 
 Previews of the interface themes on different devices can be viewed here:
-![Business Light Previews](https://github.com/Juliet-Simpson/js-to-do-list/blob/master/assets/images/readme-scrshts/b-l-prev.png "Business Light Previews")
-![Business Dark Previews](https://github.com/Juliet-Simpson/js-to-do-list/blob/master/assets/images/readme-scrshts/b-d-prev.png "Business Dark Previews")
-![Fun Light Previews](https://github.com/Juliet-Simpson/js-to-do-list/blob/master/assets/images/readme-scrshts/f-l-prev.png "Fun Light Previews")
-
-<!-- IMAGES -->
+![Business Light Previews](assets/images/readme-scrshts/b-l-prev.png "Business Light Previews")
+![Business Dark Previews](assets/images/readme-scrshts/b-d-prev.png "Business Dark Previews")
+![Fun Light Previews](assets/images/readme-scrshts/f-l-prev.png "Fun Light Previews")
+![Fun Dark Previews](assets/images/readme-scrshts/f-d-prev.png "Fun Dark Previews")
 
 ## User Stories
 
@@ -39,6 +38,7 @@ To create a to do list app that meets the needs of the user stories.
 Features to include:
 
 * Option to change overall colour scheme, preference saved locally to reload on the next visit.
+
 * Date and time
 * Input to name a list, make the input value the list title to display that instead of the input, and add that title to a 'list of lists'.
 * Create multiple lists.
@@ -57,6 +57,7 @@ Features to include:
 ### **3. Structure**
 
 * The app will be all on one page.  
+
 * It will be responsive for different screen sizes and the layout will vary accordingly.  
 * The header will contain the colour scheme selection options, page title, the date and time and the How To Use speech bubble button to open the modal. 
 * Below the header, a sction containing a text input field to name the list OR the title of the currently open list.  
@@ -69,7 +70,7 @@ Features to include:
 
 The wireframes can be viewed here:
 
-- [Wireframes](https://github.com/Juliet-Simpson/js-to-do-list/blob/master/assets/wireframes/wireframes.pdf)
+- [Wireframes](assets/wireframes/wireframes.pdf)
 
 
 ### **5. Surface**
@@ -90,30 +91,55 @@ There will be 4 different themes to choose from each with its own colour scheme.
 
 ## Features
 
-### Included
+### Included:
 * A button bar to select an interface color scheme at the top of the page. The selection will be saved to local storage and be the theme that shows on reloading the page.
+
 * The date and time shown in the header.
+
 * A speech bubble button in the header or dropping just below and overlaying the page to open a modal which gives instructions for using the app.
+
+* An X button at the top right of the modal to close it.
+
 * A text input field to name a list, the entered text being converted to a list title in the place of the text input on pressing enter. The entered text will also be appended to the 'list of lists' under the heading Current Lists.
+* An alert box will appear warning the user of a duplicate list name if the same list name is entered twice.  The duplicate list name will not be added.
+
 * The list name will be saved to local storage and will still be visible under the heading Current Lists on returning to the page.  
+
 * Each list name under Current Lists will be clickable to put that list name into the position of list title and show the to do items in that list in the To Do list section.  If it gets longer than the available space it will become scrollable.
-* There will be a space for items to do, central to the page. On mobile this will initially be small but increase with added items until a maximum height is reached after which the list of to do items will be scrollable.
+
+* There will be a space for items to do, central to the page. On mobile this will initially be a small height but increase with added items until a maximum is reached after which the list of to do items will be scrollable.
+
 * At the bottom of the to do items section the will be a text input field to add an item to do on entering some text and then pressing enter.
+
+* If an attempt is made to add a to do item without a list being named, an alert will appear asking the user to first select of name a list.
+
+* If a duplicate to do item is entered in one list an alert will appear tell the user that to do is already listed.  It won't then be added to the list.
+
 * To the left of each item to do will be a circle that can be checked.  A checked item will then appear with a line through the text.
+
 * To the right of an item will be an exclamation icon which can be clicked to turn itself and the text of the to do item red.  Clicking it again will remove the red color. If an item has been checked the red color is disabled.
+
 * To the right of the urgent icon will be a trash icon which will remove the to do item from the list.
+
 * Below the Add Something To Do input will be a New List and a Delete List button.
+
 * The delete list will remove a list name and its to dos from the Current lists and from local storage.
+
 * The new List button will retain the previous list name under current lists and its associated to dos will be stored in local storage.  The New List Name input box will return and replace the previous list tile.  The to dos sction will be cleared.
+
 * The current weather in the user's location will be shown in a panel to the left of the screen on desktops and on scrolling to the bottom ofthe app on mobiles.  A request will be made on a user's first visit for them to allow geolocation for this.
+
 * A notification will be shown in the weather section if there is a problem with obtaining geolocation or weather data.
+
 * All the lists, with their associated to do do's with their associated custom attributes, will be saved in local storage and be able to be reviewed on reopening the app after closing.
-* The app will reopen with the last list that was open (if there was one) again open.
+
+* The app will reopen showing the last list that was open (if there was one).
 
 
 ### Left to implement
 
 * Trash icons next to each list name in the list of current lists so that a list can be deleted without the necessity of first opening it.
+
 * An encouraging sound when a to do item is checked as done.
 * A sound when a to do item is trashed.
 * A 'Well Done' gif or a visual effect when a to do item is checked as done.
@@ -135,8 +161,8 @@ There will be 4 different themes to choose from each with its own colour scheme.
     * Checking of responsiveness and creation of the previews in this README.
 
 - [Bootstrap (version 4.6.0](https://getbootstrap.com/docs/4.6/getting-started/introduction/)) 
-    * **CSS** For responsive layout for different screen sizes.
-    * **CSS and JavaScript** Code for How To Use modal.
+    * **CSS and HTML** For responsive layout for different screen sizes.
+    * **CSS, HTML and JavaScript** for How To Use modal.
 
 - [Google Fonts](https://fonts.google.com/)
     * Used to import the 'Arvo' font for the business themes and the 'Josefin Sans' font for the fun themes into the style.css file.
@@ -156,13 +182,13 @@ There will be 4 different themes to choose from each with its own colour scheme.
 - [Font Awesome:](https://fontawesome.com/)
     * Icons for Date and Time and for 'to do' items, made clickable to indicate done, urgent or trash.
 
--[OpenWeatherMap](https://openweathermap.org/current)
+- [OpenWeatherMap](https://openweathermap.org/current)
     * Used for the API call to get current weather data based on latitude and longitude.
 
 - [Paint-X:](https://paint-x.com/)
     * Used to create the 'How To Use', 'Delete List' and 'New List' Buttons.
 
--[COMPRESS PNG:](https://compresspng.com/)
+- [COMPRESS PNG:](https://compresspng.com/)
     * Used to compress background images to improve loading time.
 
 ## **Testing**
@@ -170,28 +196,103 @@ There will be 4 different themes to choose from each with its own colour scheme.
 ### **Third Party Tools/Services**
 
 - [W3C HTML Validator](https://validator.w3.org/nu/#textarea): Used to Validate the HTML code by copying and pasting code from index.html into this webpage. 
-* The HTML code passed through this with no errors and only the warning that the list title heading is empty in line 53.  This is intentional as 
+* The HTML code passed through this with no errors or warnings.
 
 
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator)
-    * Used to validate the code from all css files individually by pasting into this page.
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator): Used to validate the code from all css files individually by pasting the code into this page.
+    * The CSS code all passed with no errors or warnings.
 
-- [JSHint](https://jshint.com/)
-    * Used to validate code from all javascript files individually.
+- [JSHint](https://jshint.com/): Used to validate code from all javascript files individually by pasting them into this webpage.
+    * All code passed with no errors.
+    * list.js and weather.js caused warnings that the code was only compatible with ES6 as template literal syntax and 'let' to declare variables had been used.  I believe these are acceptable for this project.
 
-- [Chrome Lighthouse Extension](https://developers.google.com/web/tools/lighthouse/)
-    * Used to audit the app.   A summary of the results can be found [here.]()
-<!-- Accessibility? -->
+- [Chrome Lighthouse Extension](https://developers.google.com/web/tools/lighthouse/): Used to audit the app.   
+    * Some improvements and changes were needed to improve lighthouse scores.  These are summarised in this table:
+    ![Lighthouse Improvements](assets/images/readme-scrshts/lh-imprv.png "Lighthouse Improvements")
+
+    * A summary of the subsequent lighthouse results are shown here:
+     ![Lighthouse Results Summary](assets/images/readme-scrshts/lighthouse.png "Lighthouse results summary")
+
 ### Manual Testing
 **Bugs and fixes**
+A summary of the bugs and fixes is shown below:
+
+<!-- insert table -->
 
 **Functionality**
-* Devices and screen sizes
-* In app functionality throughout all themes.
+1. All the features were tested on the following and were confirmed to be functioning correctly, following the bug fixes detailed above: 
+    * Browsers:
+        * Google Chrome
+        * Safari
+        * Mozilla 
+        * EDGE
+
+* Devices:
+    * 13" MacBook Air 
+    * iPhone 7
+
+* Other devices were tested through Google Chrome DevTools:
+    * Moto G4
+    * Galaxy S5
+    * Pixel 2
+    * Pixel 2 XL
+    * iPhone 5/SE 
+    * iPhone 6/7/8 
+    * iPhone 6/7/8 Plus
+    * iPhone X 
+    * iPad
+    * iPad Pro 
+    * Surface Duo 
+    * Galaxy Fold 
+
+* Responsiveness was tested on the following screen widths using DevTools (Sizes in px):
+    * 320 
+    * 375 
+    * 425 
+    * 768
+    * 1024
+    * 1440
 
 **Pending Issues**
 
+<!-- Insert -->
+
+
 ### User Stories
+
+Each user story was tesed individually and consideration given to how it may be satisified by this app.
+* A user who struggles with keeping multiple manually written to-do lists is looking for an automated alternative on their devices.
+    * The app supports multiple named lists of things to do, to which items can be easily added and removed:
+    ![User Story 1](assets/images/readme-scrshts/us-1.png "User Story 1 Screen shot")
+
+* A user who is struggling with organisation wants to keep a record of tasks they need to do that can be easily updated with new items, urgent ones highlighted and finished ones checked or deleted.
+    * A New item to do can be easily added by entering text into the 'Add Something To Do' text input field.
+    * Urgent items can be highlighted in red by clicking the adjacent exclamation icon.
+    * Completed items can be ticked off and stuck through by clicking the cicle to the left of the item.
+    ![User Story 2](assets/images/readme-scrshts/us-2.png "User Story 2 Screen shot")
+
+* A user who is struggling with motivation wants an attractive interface to encourage them to engage with the tasks they must perform.
+    * Either of the 'fun' themes, Fun Light or Fun Dark may please this user and encourage them to open the app as a first step in becoming more productive.
+    ![User Story 3.1](assets/images/readme-scrshts/us-3.1.png "User Story 3 Screen shot 1")
+    ![User Story 3.2](assets/images/readme-scrshts/us-3.2.png "User Story 3 Screen shot 2")
+
+* A user wants to be able to return to the app after closing it and review lists that they have written at an earlier date.
+    * On closing the app, closing the browser, shutting down the device and then reopening it, the previously entered lists and their associated to dos will still be present as when it was closed.
+    * Further organisation could be achieved by giving a list the date on which it was written as a title.  Similarly a day on which things must be done could be used as a title:
+    ![User Story 4](assets/images/readme-scrshts/us-4.png "User Story 4")
+
+* Two users wish to use the app from the same device and would like to each be able to access their own list.
+    * Each person requiring a list can name it for themselves and keep their own things to do in that list, while another person using the same device can also do this.  For example:
+
+    <!-- Insert images -->
+
+* A user would like to obtain information about the weather in their location at the same time as reviewing their things-to-do.
+    * Provided that their browser has geolocation enabled in their browser and they allow the app to know their location on the first visit, the user can see weather information for their location on the left of the screen on larger screens and by scrolling to the bottom of the app on smaller screens.
+    * Colour effects have been added to the icons if needed to make sure they all visible on all backgrounds:
+    ![User Story 5.1](assets/images/readme-scrshts/us-5.1.png "User Story 5 Screen shot 1")
+    ![User Story 5.2](assets/images/readme-scrshts/us-5.2.png "User Story 5 Screen shot 2")
+    ![User Story 5.3](assets/images/readme-scrshts/us-5.3.png "User Story 5 Screen shot 3")
+    ![User Story 5.4](assets/images/readme-scrshts/us-5.4.png "User Story 5 Screen shot 4")
 
 ## Deployment
 
@@ -200,19 +301,19 @@ There will be 4 different themes to choose from each with its own colour scheme.
 1. Log into GitHub and locate the repository [Juliet-Simpson/js-to-do-list](https://github.com/Juliet-Simpson/js-to-do-list)
 
 2. At the top of the list of files, below the repository name there is a horizontal menu.  Select "settings" from this menu.
-    ![Settings](https://github.com/Juliet-Simpson/js-to-do-list/blob/master/assets/images/readme-scrshts/dep-settings.png "Settings Button")
+    ![Settings](assets/images/readme-scrshts/dep-settings.png "Settings Button")
 
 3.  Scroll down the settings page until the "GitHub Pages" section is located.  
 
 4. Click the link to open the GitHub Pages tab.
-    ![Pages tab link](https://github.com/Juliet-Simpson/js-to-do-list/blob/master/assets/images/readme-scrshts/gh-pages-scrsht.png "Pages tab link")
+    ![Pages tab link](assets/images/readme-scrshts/gh-pages-scrsht.png "Pages tab link")
 
 5. From the "Select branch" dropdown, select "master"
 
 6. From the "Select folder" dropdown, select "root"
 
 7. Press the "Save" button
-    ![Save to pages](https://github.com/Juliet-Simpson/js-to-do-list/blob/master/assets/images/readme-scrshts/save-to-pages.png "Save to pages")
+    ![Save to pages](assets/images/readme-scrshts/save-to-pages.png "Save to pages")
 
 8. The adress of the deployed site can now be viewed in the green box as a link.
 
@@ -223,7 +324,7 @@ There will be 4 different themes to choose from each with its own colour scheme.
 1. Log into GitHub and locate the repository [Juliet-Simpson/js-to-do-list](https://github.com/Juliet-Simpson/js-to-do-list)
 
 2. Select the clone dropdown and then click the clipboard icon to copy the link.
-    ![Copy clone link](https://github.com/Juliet-Simpson/js-to-do-list/blob/master/assets/images/readme-scrshts/clone.png "Copy clone link")
+    ![Copy clone link](assets/images/readme-scrshts/clone.png "Copy clone link")
 
 3. Type git clone and then paste this link into the terminal of your chosen editor and press enter:
 `git clone https://github.com/Juliet-Simpson/js-to-do-list.git`
