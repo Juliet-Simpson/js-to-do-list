@@ -47,7 +47,7 @@ renderLists(LISTS);
 
 // Append list name to list of current lists
 function renderList(name){
-    let listName = `<li><div class="list-link" onclick = "selectList('${name}')" >${name}</div></li>`;
+    let listName = `<li><div class="list-link" onclick = "selectList(this.textContent)" >${name}</div></li>`;
     let positioning = "beforeend";
 
     listsElement.insertAdjacentHTML(positioning, listName);
@@ -169,11 +169,10 @@ function addToDo(toDo, listName){
     }
       
     let text = `<li class="thing">
-                    <i class="far ${DONE} fa-lg" job="complete" listName='${listName}' toDoText='${toDo.text}' ></i> 
-        <span class="text ${LINE} ${RED}">
-            ${toDo.text}  
-        </span><i class="fas fa-exclamation ${RED}" job="redColor" listName="${listName}" toDoText='${toDo.text}'></i>
-        <i class="far fa-trash-alt" job="delete" listName="${listName}" toDoText='${toDo.text}'></i>
+                    <i class="far ${DONE} fa-lg" job="complete"></i> 
+                    <span class="text ${LINE} ${RED}">${toDo.text}</span>
+                    <i class="fas fa-exclamation ${RED}" job="redColor"></i>
+                    <i class="far fa-trash-alt" job="delete"></i>
                 </li>`;
 
     let position = "beforeend";
@@ -264,7 +263,7 @@ listOfToDosElement.addEventListener("click",function(event){
     
     // Target the clicked icon
     const element = event.target;
-    
+
     // Exit function when text is clicked
     if(element.tagName === "SPAN"){
         return;
@@ -272,8 +271,8 @@ listOfToDosElement.addEventListener("click",function(event){
 
     // Get values of custom attributes
     const elementJob = element.attributes.job.value;
-    const elementListName = element.attributes.listName.value;
-    const elementToDoText = element.attributes.toDoText.value;
+    const elementListName = selectedList;
+    const elementToDoText = element.parentNode.getElementsByTagName("SPAN")[0].textContent;
 
     // Search for the correct list and the correct todo and then make the clicked change 
     LISTS.forEach(function(list){
@@ -306,3 +305,4 @@ listOfToDosElement.addEventListener("click",function(event){
 function newListButton(){
     selectList("");
 }
+
