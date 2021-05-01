@@ -164,29 +164,29 @@ There will be 4 different themes to choose from each with its own colour scheme.
 - [Am I Responsive:](http://ami.responsivedesign.is/)
     * Checking of responsiveness and creation of the previews in this README.
 
-- [Bootstrap (version 4.6.0](https://getbootstrap.com/docs/4.6/getting-started/introduction/)) 
+- [Bootstrap (version 4.6.0:](https://getbootstrap.com/docs/4.6/getting-started/introduction/)) 
     * **CSS and HTML** For responsive layout for different screen sizes.
     * **CSS, HTML and JavaScript** for How To Use modal.
 
-- [Google Fonts](https://fonts.google.com/)
+- [Google Fonts:](https://fonts.google.com/)
     * Used to import the 'Arvo' font for the business themes and the 'Josefin Sans' font for the fun themes into the style.css file.
 
-- [Git](https://git-scm.com/)
+- [Git:](https://git-scm.com/)
     * Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 
 - [GitHub:](https://github.com/)
     * GitHub is used to store the projects code after being pushed from Git.
 
-- [GitPod](https://www.gitpod.io/)
+- [GitPod:](https://www.gitpod.io/)
     * IDE used for development and testing.
 
-- [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/)
+- [Google Chrome Dev Tools:](https://developer.chrome.com/docs/devtools/)
     * Used throughout the development process to view the console and locate errors in javascript and assist with layout and styling.
 
 - [Font Awesome:](https://fontawesome.com/)
     * Icons for Date and Time and for 'to do' items, made clickable to indicate done, urgent or trash.
 
-- [OpenWeatherMap](https://openweathermap.org/current)
+- [OpenWeatherMap:](https://openweathermap.org/current)
     * Used for the API call to get current weather data based on latitude and longitude.
 
 - [Paint-X:](https://paint-x.com/)
@@ -270,27 +270,32 @@ Each user story was tested individually and consideration given to how it may be
 
 * A user who struggles with keeping multiple manually written to-do lists is looking for an automated alternative on their devices.
     * The app supports multiple named lists of things to do, to which items can be easily added and removed:
+
     ![User Story 1](assets/images/readme-scrshts/us-1.png "User Story 1 Screen shot")
 
 * A user who is struggling with organisation wants to keep a record of tasks they need to do that can be easily updated with new items, urgent ones highlighted and finished ones checked or deleted.
     * A New item to do can be easily added by entering text into the 'Add Something To Do' text input field.
     * Urgent items can be highlighted in red by clicking the adjacent exclamation icon.
     * Completed items can be ticked off and stuck through by clicking the circle to the left of the item.
+
     ![User Story 2](assets/images/readme-scrshts/us-2.png "User Story 2 Screen shot")
 
 * A user who is struggling with motivation wants an attractive interface to encourage them to engage with the tasks they must perform.
-    * Either of the 'fun' themes, Fun Light or Fun Dark may please this user and encourage them to open the app as a first step in becoming more productive.
+    * Either of the 'fun' themes, Fun Light or Fun Dark may encourage the user to use the app.
+
     ![User Story 3.1](assets/images/readme-scrshts/us-3.1.png "User Story 3 Screen shot 1")
     ![User Story 3.2](assets/images/readme-scrshts/us-3.2.png "User Story 3 Screen shot 2")
 
 * A user wants to be able to return to the app after closing it and review lists that they have written at an earlier date.
     * On closing the app, closing the browser, shutting down the device and then reopening it, the previously entered lists and their associated to dos will still be present as when it was closed.
     * Further organisation could be achieved by giving a list the date on which it was written as a title.  Similarly a day on which things must be done could be used as a title:
+
     ![User Story 4](assets/images/readme-scrshts/us-4.png "User Story 4")
 
 * A user would like to obtain information about the weather in their location at the same time as reviewing their things-to-do.
     * Provided that their browser has geolocation enabled in their browser and they allow the app to know their location on the first visit, the user can see weather information for their location on the left of the screen on larger screens and by scrolling to the bottom of the app on smaller screens.
     * Colour effects have been added to the icons if needed to make sure they all visible on all backgrounds:
+
     ![User Story 5.1](assets/images/readme-scrshts/us-5.1.png "User Story 5 Screen shot 1")
     ![User Story 5.2](assets/images/readme-scrshts/us-5.2.png "User Story 5 Screen shot 2")
     ![User Story 5.3](assets/images/readme-scrshts/us-5.3.png "User Story 5 Screen shot 3")
