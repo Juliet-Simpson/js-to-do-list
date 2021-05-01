@@ -7,6 +7,7 @@ A web-based To-Do-List app for Code-Institute's Fullstack Developer Diploma Mile
 The deployed site on GitHub Pages can be viewed [here.](https://juliet-simpson.github.io/js-to-do-list/)
 
 Previews of the interface themes on different devices can be viewed here:
+
 ![Business Light Previews](assets/images/readme-scrshts/b-l-prev.png "Business Light Previews")
 ![Business Dark Previews](assets/images/readme-scrshts/b-d-prev.png "Business Dark Previews")
 ![Fun Light Previews](assets/images/readme-scrshts/f-l-prev.png "Fun Light Previews")
@@ -61,7 +62,7 @@ Features to include:
 
 * It will be responsive for different screen sizes and the layout will vary accordingly.  
 * The header will contain the colour scheme selection options, page title, the date and time and the How To Use speech bubble button to open the modal. 
-* Below the header, a sction containing a text input field to name the list OR the title of the currently open list.  
+* Below the header, a section containing a text input field to name the list OR the title of the currently open list.  
 * The weather API will be to the left of the screen on a desktop and in the bottom section of the page on a tablet and a mobile.
 * The to do list items will be displayed centrally on the screen with a 'done' checkbox to the left and urgent and trash button icons to the right of each item. 
 * The 'enter a to-do' text input will be central at the bottom of the page on a desktop or at the bottom of the 'to dos' section on a tablet or mobile.
@@ -127,9 +128,9 @@ There will be 4 different themes to choose from each with its own colour scheme.
 
 * The delete list will remove a list name and its to dos from the Current lists and from local storage.
 
-* The new List button will retain the previous list name under current lists and its associated to dos will be stored in local storage.  The New List Name input box will return and replace the previous list tile.  The to dos sction will be cleared.
+* The new List button will retain the previous list name under current lists and its associated to dos will be stored in local storage.  The New List Name input box will return and replace the previous list tile.  The to dos section will be cleared.
 
-* The current weather in the user's location will be shown in a panel to the left of the screen on desktops and on scrolling to the bottom ofthe app on mobiles.  A request will be made on a user's first visit for them to allow geolocation for this.
+* The current weather in the user's location will be shown in a panel to the left of the screen on desktops and on scrolling to the bottom of the app on mobiles.  A request will be made on a user's first visit for them to allow geolocation for this.
 
 * A notification will be shown in the weather section if there is a problem with obtaining geolocation or weather data.
 
@@ -225,11 +226,11 @@ A summary of the bugs and fixes is shown below:
 **Functionality**
 1. All the features were tested on the following and were confirmed to be functioning correctly, following the bug fixes detailed above: 
 
-    * Browsers:
-        * Google Chrome
-        * Safari
-        * Mozilla 
-        * MicroSoft EDGE
+* Browsers:
+    * Google Chrome
+    * Safari
+    * Mozilla 
+    * MicroSoft EDGE
 
 * Devices:
     * 13" MacBook Air 
@@ -265,7 +266,7 @@ A summary of the bugs and fixes is shown below:
 
 ### User Stories
 
-Each user story was tetsed individually and consideration given to how it may be satisfied by this app.
+Each user story was tested individually and consideration given to how it may be satisfied by this app.
 
 * A user who struggles with keeping multiple manually written to-do lists is looking for an automated alternative on their devices.
     * The app supports multiple named lists of things to do, to which items can be easily added and removed:
