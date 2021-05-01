@@ -69,3 +69,5 @@ function displayWeather(){
     descElement.innerHTML = weather.description;
     locationElement.innerHTML = `${weather.city}, ${weather.country}`;
 }
+
+// Code written with assistance from YouTube

@@ -1,5 +1,4 @@
 // Date and time
-
 function dateAndTime(){
     // Date
     let todaysDate = new Date;
@@ -44,3 +43,5 @@ function dateAndTime(){
     setTimeout("dateAndTime()",1000);
 }
 dateAndTime();
+
+// Code written with assistance from YouTube

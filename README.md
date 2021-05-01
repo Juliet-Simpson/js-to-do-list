@@ -22,9 +22,10 @@ Previews of the interface themes on different devices can be viewed here:
 
 * A user wants to be able to return to the app after closing it and review lists that they have written at an earlier date.
 
+* A user would like to obtain information about the weather in their location at the same time as reviewing their things-to-do.
+
 * Two users wish to use the app from the same device and would like to each be able to access their own list.
 
-* A user would like to obtain information about the weather in their location at the same time as reviewing their things-to-do.
 
 
 ## UX
@@ -92,6 +93,7 @@ There will be 4 different themes to choose from each with its own colour scheme.
 ## Features
 
 ### Included:
+
 * A button bar to select an interface color scheme at the top of the page. The selection will be saved to local storage and be the theme that shows on reloading the page.
 
 * The date and time shown in the header.
@@ -149,15 +151,16 @@ There will be 4 different themes to choose from each with its own colour scheme.
 ### Languages
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
+
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
 ### Frameworks, Libraries and Tools 
 
-- [Balsamiq](https://balsamiq.com/)
+- [Balsamiq:](https://balsamiq.com/)
     * Creation of the wireframe mock ups.
 
-- [Am I Responsive](http://ami.responsivedesign.is/)
+- [Am I Responsive:](http://ami.responsivedesign.is/)
     * Checking of responsiveness and creation of the previews in this README.
 
 - [Bootstrap (version 4.6.0](https://getbootstrap.com/docs/4.6/getting-started/introduction/)) 
@@ -217,19 +220,21 @@ There will be 4 different themes to choose from each with its own colour scheme.
 **Bugs and fixes**
 A summary of the bugs and fixes is shown below:
 
-<!-- insert table -->
+![Bug Fixes Table](assets/images/readme-scrshts/bug-fixes.png "Bug Fixes Table")
 
 **Functionality**
 1. All the features were tested on the following and were confirmed to be functioning correctly, following the bug fixes detailed above: 
+
     * Browsers:
         * Google Chrome
         * Safari
         * Mozilla 
-        * EDGE
+        * MicroSoft EDGE
 
 * Devices:
     * 13" MacBook Air 
     * iPhone 7
+    * Samsung S8
 
 * Other devices were tested through Google Chrome DevTools:
     * Moto G4
@@ -255,12 +260,13 @@ A summary of the bugs and fixes is shown below:
 
 **Pending Issues**
 
-<!-- Insert -->
+* None known
 
 
 ### User Stories
 
-Each user story was tesed individually and consideration given to how it may be satisified by this app.
+Each user story was tetsed individually and consideration given to how it may be satisfied by this app.
+
 * A user who struggles with keeping multiple manually written to-do lists is looking for an automated alternative on their devices.
     * The app supports multiple named lists of things to do, to which items can be easily added and removed:
     ![User Story 1](assets/images/readme-scrshts/us-1.png "User Story 1 Screen shot")
@@ -268,7 +274,7 @@ Each user story was tesed individually and consideration given to how it may be 
 * A user who is struggling with organisation wants to keep a record of tasks they need to do that can be easily updated with new items, urgent ones highlighted and finished ones checked or deleted.
     * A New item to do can be easily added by entering text into the 'Add Something To Do' text input field.
     * Urgent items can be highlighted in red by clicking the adjacent exclamation icon.
-    * Completed items can be ticked off and stuck through by clicking the cicle to the left of the item.
+    * Completed items can be ticked off and stuck through by clicking the circle to the left of the item.
     ![User Story 2](assets/images/readme-scrshts/us-2.png "User Story 2 Screen shot")
 
 * A user who is struggling with motivation wants an attractive interface to encourage them to engage with the tasks they must perform.
@@ -281,11 +287,6 @@ Each user story was tesed individually and consideration given to how it may be 
     * Further organisation could be achieved by giving a list the date on which it was written as a title.  Similarly a day on which things must be done could be used as a title:
     ![User Story 4](assets/images/readme-scrshts/us-4.png "User Story 4")
 
-* Two users wish to use the app from the same device and would like to each be able to access their own list.
-    * Each person requiring a list can name it for themselves and keep their own things to do in that list, while another person using the same device can also do this.  For example:
-
-    <!-- Insert images -->
-
 * A user would like to obtain information about the weather in their location at the same time as reviewing their things-to-do.
     * Provided that their browser has geolocation enabled in their browser and they allow the app to know their location on the first visit, the user can see weather information for their location on the left of the screen on larger screens and by scrolling to the bottom of the app on smaller screens.
     * Colour effects have been added to the icons if needed to make sure they all visible on all backgrounds:
@@ -293,6 +294,13 @@ Each user story was tesed individually and consideration given to how it may be 
     ![User Story 5.2](assets/images/readme-scrshts/us-5.2.png "User Story 5 Screen shot 2")
     ![User Story 5.3](assets/images/readme-scrshts/us-5.3.png "User Story 5 Screen shot 3")
     ![User Story 5.4](assets/images/readme-scrshts/us-5.4.png "User Story 5 Screen shot 4")
+
+* Two users wish to use the app from the same device and would like to each be able to access their own list.
+    * Each person requiring a list can name it for themselves and keep their own things to do in that list, while another person using the same device can also do this.  For example:
+
+    ![User Story 6.1](assets/images/readme-scrshts/us-6.1.png "User Story 6 Screen shot 1")
+    ![User Story 2.2](assets/images/readme-scrshts/us-6.2.png "User Story 6 Screen shot 2")
+
 
 ## Deployment
 
@@ -333,9 +341,102 @@ Each user story was tesed individually and consideration given to how it may be 
 
 ## Credits
 
+### Concept
+
+* The idea for the app was coceived by me
+
 ### Code
-#### Sources
+
+* Button bar and modal:
+
+    * [Bootstrap (version 4.6.0](https://getbootstrap.com/docs/4.6/getting-started/introduction/)) 
+
+* Rainbow background for fun light theme:
+
+    * This [Stack Overflow Post](https://stackoverflow.com/questions/56418763/creating-the-perfect-rainbow-gradient-in-css#answer-63302468) with the colors changed.
+
+* All other code was written by me.
+
+### Sources
+
+#### JavaScript
+
+* Changing themes
+
+    * https://www.youtube.com/watch?v=_XAQH41rjio
+
+    * https://stackoverflow.com/questions/52920019/save-current-stylesheet-to-local-storage
+
+* Date and time
+
+    * https://www.youtube.com/watch?v=HyhVjHGb19k
+
+* Weather API 
+
+    * https://www.youtube.com/watch?v=KqZGuzrY9D4&list=RDCMUC8n8ftV94ZU_DJLOLtrpORA&index=3
+
+* To do lists
+
+    * https://www.youtube.com/watch?v=b8sUhU_eq3g&t=2315s
+
+
+    * https://blog.logrocket.com/localstorage-javascript-complete-guide/#setitem
+
+    * https://blog.logrocket.com/localstorage-javascript-complete-guide/#getitem
+
+
+    * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+
+
+    * https://stackoverflow.com/questions/16626735/how-to-loop-through-an-array-containing-objects-and-access-their-properties
+
+    * https://flaviocopes.com/insertadjacenthtml/
+
+    * https://medium.com/@deniscangemi/remove-element-from-array-in-javascript-bf2d2428733
+
+    * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+
+    * https://stackoverflow.com/questions/11715646/scroll-automatically-to-the-bottom-of-the-page
+
+    * https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTo
+
+    * https://www.w3schools.com/jsref/met_element_getelementsbytagname.asp
+
+#### CSS
+
+* Layout
+
+    * https://stackoverflow.com/questions/7425665/switching-the-order-of-block-elements-with-css
+
+    * https://css-tricks.com/a-complete-guide-to-calc-in-css/
+
+    * https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-properties
+
+    * https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp
+
+* Weather Images
+
+    * https://codepen.io/sosuke/pen/Pjoqqp 
 
 ### Images
 
+* Background Images
+
+    * https://wallpapersafari.com/
+
+    * https://www.teahub.io/
+
+    * https://cutewallpaper.org/
+
+* Weather Icons
+
+    * https://github.com/manifestinteractive/weather-underground-icons
+
 ### Acknowledgements
+
+* My Code Institute Mentor
+
+* Code Institute Tutor Support
+
+* My friend Yassine Ait Mensour for advice on saving the JavaScript lists object
+
